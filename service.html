@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level Uptec Consultancy - About Us</title>
+
+   <title>Sticky Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+    <!-- Navigation section -->
+<nav class="navbar fixed-top px-4 py-3 justify-content-between align-items-center">
+    <div class="logo fw-bold fs-4 text-success">Level Upec Consultancy</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+   
+   
+  <div class="overlay" id="overlay">
+    <div class="menu-item" style="--bg-color: #555;"><a href="index.html">Home</a></div>
+    <div class="menu-item" style="--bg-color: #b3432c;"><a href="about.html">About</a></div>
+    <div class="menu-item" style="--bg-color: #1f244e;"><a href="service.html">Our Services</a></div>
+    <div class="menu-item" style="--bg-color: #487c6a;"><a href="project.html">Our Projects</a></div>
+    <div class="menu-item" style="--bg-color: #9c7b45;"><a href="contact.html">Contact Us</a></div>
+  </div>
+
+      
+<section class="hero-section" aria-labelledby="hero-headline">
+        <div class="hero-content">
+            <h1 class="hero-headline" id="hero-headline">Our Services</h1>
+            <p class="hero-description">
+                “Discover our wide range of professional services designed to deliver value, innovation.”
+            </p>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+
+    
+ <style>
+       
+/* As usual Normal starting point of css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+}
+
+.navbar {
+  z-index: 2000;
+  background: transparent; /* Removed black background */
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  z-index: 2100;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: rgb(255, 255, 255); /* This sets the hamburger lines to black */
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(9px);
+  background: rgb(255, 255, 255); /* This keeps the first line black when active */
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-9px);
+  background: rgb(255, 255, 255); /* This keeps the third line black when active */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.overlay.active {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.menu-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  transform: translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.menu-item a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.menu-item.show {
+  transform: translateY(0);
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 1rem !important;
+    margin-top: -8px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+.navbar .logo {
+  
+  color: white!important;
+  
+}
+
+/* Hero Section */
+      /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-headline {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 22px;
+            height: 38px;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .scroll-indicator span::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: scroll 1.5s infinite;
+        }
+
+        @keyframes scroll {
+            0% { opacity: 0; transform: translate(-50%, 0); }
+            50% { opacity: 1; transform: translate(-50%, 12px); }
+            100% { opacity: 0; transform: translate(-50%, 24px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                    url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600');
+            }
+
+            .hero-content {
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .hero-headline {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                line-height: 1.3;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+                max-width: 85%;
+            }
+
+            .scroll-indicator {
+                bottom: 20px;
+            }
+
+            .scroll-indicator span {
+                width: 18px;
+                height: 32px;
+            }
+
+            .scroll-indicator span::after {
+                width: 4px;
+                height: 4px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content {
+                padding: 10px;
+            }
+
+            .hero-headline {
+                font-size: 1.6rem;
+            }
+
+            .hero-description {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .scroll-indicator {
+                bottom: 15px;
+            }
+        }
+    </style>
+
+
+
+<script>
+/***********************/
+/* Hamburger section */
+/***********************/
+const hamburger = document.getElementById('hamburger'); 
+const overlay = document.getElementById('overlay');
+const menuItems = document.querySelectorAll('.menu-item');
+
+let isOpen = false;
+
+hamburger.addEventListener('click', () => {
+  isOpen = !isOpen;
+  hamburger.classList.toggle('active');
+  overlay.classList.toggle('active');
+
+  menuItems.forEach((item, index) => {
+    setTimeout(() => {
+      if (isOpen) {
+        item.classList.add('show');
+      } else {
+        item.classList.remove('show');
+      }
+    }, index * 150);
+  });
+});
+</script>
+
+</head>
+<body>
+
+ 
+
+
+
+
+<!-- Our services section -->
+<section class="services-section" id="services">
+  <div class="container">
+    <!-- Services section title -->
+    <h2 class="text-center mb-5 services-title">Our Services</h2>
+    <!-- First services group (8 services on desktop, 4 on mobile) -->
+    <div class="services-group services-group1 active">
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Architecture</h3>
+              <p class="service-description">Creative architectural solutions for your space and comfort.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Interior Design</h3>
+              <p class="service-description">Elegant and functional interior designs tailored to your needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/221506/pexels-photo-221506.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Construction</h3>
+              <p class="service-description">High-quality construction services with precision and care.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Consulting</h3>
+              <p class="service-description">Expert advice for your architectural and design projects.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 d-none d-md-block">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Urban Planning</h3>
+              <p class="service-description">Strategic planning for sustainable urban development.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 d-none d-md-block">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Renovation</h3>
+              <p class="service-description">Modernizing and upgrading existing spaces with style.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 d-none d-md-block">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/3183181/pexels-photo-3183181.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Green Building</h3>
+              <p class="service-description">Eco-friendly solutions for energy-efficient buildings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 d-none d-md-block">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">3D Visualization</h3>
+              <p class="service-description">Realistic 3D models to visualize your project before construction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Second services group (4 services, mobile only, 2-column horizontal swipe) -->
+    <div class="services-group services-group2">
+      <div class="row g-4 horizontal-services-row">
+        <div class="col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Urban Planning</h3>
+              <p class="service-description">Strategic planning for sustainable urban development.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Renovation</h3>
+              <p class="service-description">Modernizing and upgrading existing spaces with style.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/3183181/pexels-photo-3183181.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">Green Building</h3>
+              <p class="service-description">Eco-friendly solutions for energy-efficient buildings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="service-card stagger-fade">
+            <div class="service-img" style="background-image: url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg');"></div>
+            <div class="service-content">
+              <h3 class="service-title">3D Visualization</h3>
+              <p class="service-description">Realistic 3D models to visualize your project before construction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll progress bar for group2 -->
+      <div class="scroll-progress d-md-none">
+        <div class="scroll-progress-bar"></div>
+      </div>
+    </div>
+    <!-- Toggle links for mobile -->
+    <div class="text-center mt-4 services-toggle d-md-none">
+      <a href="#" class="next-services">Next Services</a>
+      <a href="#" class="previous-services d-none">Previous Services</a>
+    </div>
+  </div>
+</section>
+
+<style>
+:root {
+  --primary-navy: #0a2540;
+  --secondary-blue: #335c81;
+  --accent-gold: #c89666;
+  --light-beige: #f9f7f3;
+  --dark-charcoal: #2c3e50;
+}
+
+.services-section {
+  padding: 60px 15px;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.services-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--dark-charcoal);
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.services-title:hover {
+  color: var(--accent-gold);
+  transform: translateY(-5px);
+}
+
+.services-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent-gold), var(--secondary-blue));
+  transition: width 0.3s ease;
+}
+
+.services-title:hover::after {
+  width: 120px;
+}
+
+.services-group {
+  display: none !important;
+}
+
+.services-group.active {
+  display: block !important;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+}
+
+.service-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.1);
+}
+
+.service-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.service-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-charcoal);
+  margin-bottom: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover .service-title {
+  color: var(--accent-gold);
+  transform: translateY(-5px);
+}
+
+.service-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  flex: 1;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.service-card:hover .service-description {
+  color: #333;
+  opacity: 0.9;
+}
+
+.horizontal-services-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-services-row .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.horizontal-services-row::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-services-row {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-progress {
+  height: 5px;
+  background: #e0e0e0;
+  margin-top: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: var(--secondary-blue);
+  width: 0;
+  transition: width 0.2s ease;
+}
+
+.next-services, .previous-services {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-blue);
+  text-decoration: none;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.next-services:hover, .previous-services:hover {
+  color: var(--accent-gold);
+  box-shadow: 0 4px 12px rgba(200,150,102,0.2);
+}
+
+.stagger-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.stagger-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .services-group1 {
+    display: block !important;
+  }
+  .services-group2 {
+    display: none !important;
+  }
+  .services-toggle {
+    display: none !important;
+  }
+  .service-card {
+    min-height: 360px;
+  }
+  .service-img {
+    height: 180px;
+  }
+  .service-title {
+    font-size: 1.4rem;
+  }
+  .service-description {
+    font-size: 1rem;
+  }
+  #services .services-group1 .col-md-3.d-none.d-md-block {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 15px;
+  }
+  .services-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .service-card {
+    min-height: 300px;
+  }
+  .service-img {
+    height: 140px;
+  }
+  .service-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .service-description {
+    font-size: 0.85rem;
+  }
+  #services .services-group1 .col-md-3.d-none.d-md-block {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-title {
+    font-size: 1.5rem;
+  }
+  .service-card {
+    min-height: 280px;
+  }
+  .service-img {
+    height: 120px;
+  }
+  .service-title {
+    font-size: 1rem;
+  }
+  .service-description {
+    font-size: 0.8rem;
+  }
+  .horizontal-services-row .col-6 {
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded, initializing services section at', new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+  console.log('Window width:', window.innerWidth);
+
+  // Staggered fade-in for service cards
+  if ('IntersectionObserver' in window) {
+    console.log('IntersectionObserver supported');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          console.log(`Observing card ${index}, making visible`);
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 150);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.stagger-fade').forEach(el => {
+      console.log('Observing element:', el);
+      observer.observe(el);
+    });
+  } else {
+    console.log('IntersectionObserver not supported, showing all cards');
+    document.querySelectorAll('.stagger-fade').forEach(el => el.classList.add('visible'));
+  }
+
+  // Mobile toggle for services groups and scroll progress
+  const group1 = document.querySelector('.services-group1');
+  const group2 = document.querySelector('.services-group2');
+  const nextServices = document.querySelector('.next-services');
+  const previousServices = document.querySelector('.previous-services');
+  const horizontalRow = document.querySelector('.horizontal-services-row');
+  const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+
+  if (!group1 || !group2 || !nextServices || !previousServices) {
+    console.error('Missing toggle elements:', { group1, group2, nextServices, previousServices });
+    return;
+  }
+
+  // Log number of services
+  const allServices = document.querySelectorAll('.services-group1 .col-md-3');
+  const mobileServices = document.querySelectorAll('.services-group1 .col-md-3:not(.d-none.d-md-block)');
+  console.log(`Total services in group1: ${allServices.length}`);
+  console.log(`Visible services on mobile: ${mobileServices.length}`);
+
+  // Function to update scroll progress
+  const updateScrollProgress = () => {
+    if (horizontalRow && scrollProgressBar) {
+      const scrollWidth = horizontalRow.scrollWidth - horizontalRow.clientWidth;
+      const scrollLeft = horizontalRow.scrollLeft;
+      const progress = scrollWidth > 0 ? (scrollLeft / scrollWidth) * 100 : 0;
+      console.log('Updating scroll progress:', { scrollLeft, scrollWidth, progress });
+      scrollProgressBar.style.width = `${progress}%`;
+    } else {
+      console.error('Horizontal row or scroll progress bar not found');
+    }
+  };
+
+  // Initialize based on screen size
+  if (window.innerWidth <= 768) {
+    console.log('Mobile view detected, ensuring only 4 services visible');
+    group1.classList.add('active');
+    group2.classList.remove('active');
+    nextServices.classList.remove('d-none');
+    previousServices.classList.add('d-none');
+
+    // Force hide desktop-only services
+    document.querySelectorAll('.services-group1 .d-none.d-md-block').forEach(el => {
+      el.style.display = 'none';
+      console.log('Hiding desktop-only service:', el);
+    });
+
+    // Remove existing listeners to prevent duplicates
+    nextServices.removeEventListener('click', handleNextClick);
+    previousServices.removeEventListener('click', handlePreviousClick);
+
+    // Define click handlers
+    function handleNextClick(e) {
+      e.preventDefault();
+      console.log('Next Services clicked');
+      group1.classList.remove('active');
+      group2.classList.add('active');
+      nextServices.classList.add('d-none');
+      previousServices.classList.remove('d-none');
+      window.scrollTo({ top: document.querySelector('#services').offsetTop, behavior: 'smooth' });
+      if (horizontalRow && scrollProgressBar) updateScrollProgress();
+    }
+
+    function handlePreviousClick(e) {
+      e.preventDefault();
+      console.log('Previous Services clicked');
+      group2.classList.remove('active');
+      group1.classList.add('active');
+      previousServices.classList.add('d-none');
+      nextServices.classList.remove('d-none');
+      window.scrollTo({ top: document.querySelector('#services').offsetTop, behavior: 'smooth' });
+    }
+
+    // Attach event listeners
+    nextServices.addEventListener('click', handleNextClick);
+    previousServices.addEventListener('click', handlePreviousClick);
+
+    // Set up scroll progress for group2
+    if (horizontalRow && scrollProgressBar) {
+      console.log('Initializing scroll progress');
+      horizontalRow.addEventListener('scroll', updateScrollProgress);
+      horizontalRow.addEventListener('touchmove', updateScrollProgress);
+      updateScrollProgress(); // Initial call
+    }
+  } else {
+    console.log('Desktop view detected, ensuring all 8 services visible');
+    group1.classList.add('active');
+    group2.classList.remove('active');
+    nextServices.classList.add('d-none');
+    previousServices.classList.add('d-none');
+
+    // Force show all services
+    document.querySelectorAll('.services-group1 .d-none.d-md-block').forEach(el => {
+      el.style.display = 'block';
+      console.log('Showing desktop service:', el);
+    });
+  }
+
+  // Handle resize to re-evaluate mobile vs desktop
+  window.addEventListener('resize', () => {
+    console.log('Window resized, re-evaluating toggle, width:', window.innerWidth);
+    if (window.innerWidth <= 768) {
+      console.log('Mobile view, ensuring only 4 services visible');
+      group1.classList.add('active');
+      group2.classList.remove('active');
+      nextServices.classList.remove('d-none');
+      previousServices.classList.add('d-none');
+
+      // Force hide desktop-only services
+      document.querySelectorAll('.services-group1 .d-none.d-md-block').forEach(el => {
+        el.style.display = 'none';
+        console.log('Hiding desktop-only service on resize:', el);
+      });
+
+      // Remove and reattach listeners for mobile
+      nextServices.removeEventListener('click', handleNextClick);
+      previousServices.removeEventListener('click', handlePreviousClick);
+
+      function handleNextClick(e) {
+        e.preventDefault();
+        console.log('Next Services clicked (resize)');
+        group1.classList.remove('active');
+        group2.classList.add('active');
+        nextServices.classList.add('d-none');
+        previousServices.classList.remove('d-none');
+        window.scrollTo({ top: document.querySelector('#services').offsetTop, behavior: 'smooth' });
+        if (horizontalRow && scrollProgressBar) updateScrollProgress();
+      }
+
+      function handlePreviousClick(e) {
+        e.preventDefault();
+        console.log('Previous Services clicked (resize)');
+        group2.classList.remove('active');
+        group1.classList.add('active');
+        previousServices.classList.add('d-none');
+        nextServices.classList.remove('d-none');
+        window.scrollTo({ top: document.querySelector('#services').offsetTop, behavior: 'smooth' });
+      }
+
+      nextServices.addEventListener('click', handleNextClick);
+      previousServices.addEventListener('click', handlePreviousClick);
+
+      if (horizontalRow && scrollProgressBar) {
+        updateScrollProgress();
+      }
+    } else {
+      console.log('Desktop view, ensuring 8 services');
+      group1.classList.add('active');
+      group2.classList.remove('active');
+      nextServices.classList.add('d-none');
+      previousServices.classList.add('d-none');
+
+      // Force show all services
+      document.querySelectorAll('.services-group1 .d-none.d-md-block').forEach(el => {
+        el.style.display = 'block';
+        console.log('Showing desktop service on resize:', el);
+      });
+    }
+
+    // Log services count after resize
+    const mobileServicesCheck = document.querySelectorAll('.services-group1 .col-md-3:not(.d-none.d-md-block)');
+    console.log(`Visible services on mobile after resize: ${mobileServicesCheck.length}`);
+  });
+
+  // Log initial state
+  console.log('Initial state:', {
+    group1Active: group1.classList.contains('active'),
+    group2Active: group2.classList.contains('active'),
+    nextVisible: !nextServices.classList.contains('d-none'),
+    previousVisible: !previousServices.classList.contains('d-none'),
+    totalServices: allServices.length,
+    mobileVisibleServices: mobileServices.length
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     PHOTO SHOWCASE (Pexels)
+     - 4 cols desktop, 3 cols lg, 2 cols md, 2 cols mobile
+     - Hover zoom + overlay + subtle tilt
+     - Lazy-loaded, with Unsplash fallback if any image fails
+   ========================= -->
+<div class="row my-5">
+  <div class="col-12">
+    <h3 class="mb-4 text-center">Our Journey in Frames</h3>
+
+    <div class="lu-image-grid">
+      <!-- Card 1 -->
+      <figure class="lu-image-card" aria-label="Collaborative strategy session">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Team collaborating around a laptop"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Collaborative Strategy</span></figcaption>
+      </figure>
+
+      <!-- Card 2 -->
+      <figure class="lu-image-card" aria-label="Planning and documentation">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Consultant writing plans"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Planning in Motion</span></figcaption>
+      </figure>
+
+      <!-- Card 3 -->
+      <figure class="lu-image-card" aria-label="Analytics and insights">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Charts and analytics on a laptop"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Data-Driven Insights</span></figcaption>
+      </figure>
+
+      <!-- Card 4 -->
+      <figure class="lu-image-card" aria-label="Performance metrics review">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3184636/pexels-photo-3184636.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="People reviewing performance metrics"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Performance Reviews</span></figcaption>
+      </figure>
+
+      <!-- Card 5 -->
+      <figure class="lu-image-card" aria-label="Workshop and coaching">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3730765/pexels-photo-3730765.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Workshop session with laptops"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Workshops & Coaching</span></figcaption>
+      </figure>
+
+      <!-- Card 6 -->
+      <figure class="lu-image-card" aria-label="Presentation and strategy board">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Presentation in meeting room"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Present • Align • Act</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<style>
+
+    .mb-4.text-center {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .mb-4.text-center {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; /* smaller on tablets/mobiles */
+    font-weight: 700;
+  }
+}
+  /* Grid: 4 cols desktop, 3 lg, 2 md, 2 mobile (space-saving) */
+  .lu-image-grid{
+         
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:16px;
+  }
+  @media (max-width: 1200px){ .lu-image-grid{ grid-template-columns:repeat(3,1fr);} }
+  @media (max-width: 992px){  .lu-image-grid{ grid-template-columns:repeat(2,1fr);} }
+  @media (max-width: 576px){  .lu-image-grid{ grid-template-columns:repeat(2,1fr);} } /* 2 cols on mobile */
+
+  .lu-image-card{
+    position:relative;
+    border-radius:14px;
+    overflow:hidden;
+    cursor:pointer;
+    background:#eee;
+    /* consistent shape */
+    aspect-ratio: 4 / 3;
+    transform: perspective(700px) rotateX(0) rotateY(0) translateZ(0);
+    transition: transform .35s ease, box-shadow .35s ease;
+    will-change: transform;
+  }
+  .lu-image-card img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition: transform .6s ease, filter .6s ease;
+    filter: saturate(0.95) contrast(1.02);
+  }
+  .lu-image-card:hover img{ transform: scale(1.06); filter: saturate(1.05) contrast(1.05); }
+  .lu-image-card:hover{ box-shadow:0 16px 40px rgba(0,0,0,.16); }
+
+  .lu-overlay{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(180deg, rgba(10,37,64,.08) 0%, rgba(10,37,64,.55) 100%);
+    color:#fff; opacity:0; transition: opacity .35s ease;
+    padding:10px; text-align:center;
+  }
+  .lu-overlay span{
+    font-weight:600; letter-spacing:.3px; line-height:1.2;
+    text-shadow:0 2px 8px rgba(0,0,0,.35);
+  }
+  .lu-image-card:hover .lu-overlay{ opacity:1; }
+
+  /* Reveal on scroll */
+  .lu-image-card{ opacity:0; transform: translateY(16px) perspective(700px) rotateX(0) rotateY(0); }
+  .lu-image-card.lu-visible{ opacity:1; transform: translateY(0) perspective(700px) rotateX(0) rotateY(0); transition: opacity .6s ease, transform .6s ease; }
+</style>
+
+<script>
+  // Subtle tilt on hover (desktop only)
+  (function(){
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if(isTouch) return; // skip on touch devices
+
+    document.querySelectorAll('.lu-image-card').forEach(card=>{
+      const damp = 12; // lower = stronger tilt
+      card.addEventListener('mousemove', (e)=>{
+        const b = card.getBoundingClientRect();
+        const x = e.clientX - b.left, y = e.clientY - b.top;
+        const rx = ((y / b.height) - 0.5) * -damp;
+        const ry = ((x / b.width) - 0.5) * damp;
+        card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      });
+      card.addEventListener('mouseleave', ()=>{
+        card.style.transform = 'perspective(700px) rotateX(0) rotateY(0)';
+      });
+    });
+  })();
+
+  // Intersection observer: reveal & gentle stagger
+  (function(){
+    const cards = document.querySelectorAll('.lu-image-card');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('lu-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach((c,i)=>{
+      c.style.transitionDelay = (i * 70) + 'ms';
+      io.observe(c);
+    });
+  })();
+</script>
+
+
+
+
+
+<!-- =========================
+        FOOTER section
+   ========================= -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="https://i.ibb.co/PzQcjbcH/Whats-App-Image-2025-04-06-at-12-21-30-41699aba.jpg" alt="Level UpTec Logo" class="footer-logo" />
+      <p>WELCOME TO THE WORLD OF SIGNATURE STYLE ARCHITECTURE & INTERIORS BY LEVEL UPTEC CONSULTANCY.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Testimonial</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>PROJECTS</h4>
+      <ul>
+        <li><a href="#">Architecture</a></li>
+        <li><a href="#">Interior</a></li>
+        <li><a href="#">Cultural Complexes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>NEWSLETTER</h4>
+      <div class="newsletter-box">
+        <input type="email" placeholder="Email Address*" />
+        <button>SEND</button>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/level-uptec-consultancy-18a081374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://youtube.com/@leveluptecconsultancy?si=6FT-G3ZwhslS2qML "><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/leveluptec?igsh=MXE4cG5xNXJlZDJjMA== "><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/share/16KYLGiBtF/ "><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/qr/WEEU7EQMUOM4G1"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Level UpTec Consultancy - Best Architecture & Interior Design Firm. All Rights Reserved.</p>
+    <p>Website by Kashmir Web Works Team</p>
+  </div>
+</footer> 
+
+<style>
+
+    /* Footer section */
+    .footer {
+  background: #1d1d1d;
+  color: #fff;
+  padding: 60px 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  max-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff9900;
+}
+
+.footer-newsletter {
+  flex: 1 1 250px;
+}
+
+.footer-newsletter h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.newsletter-box {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 100%; /* <-- Prevents overflow */
+  flex-wrap: wrap;  /* <-- Allows wrapping on smaller screens */
+}
+
+
+@media (max-width: 576px) {
+  .newsletter-box input {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-box button {
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+
+.newsletter-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+.newsletter-box button {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  font-weight: bold;
+}
+
+.newsletter-box button:hover {
+  background: #e58000;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff9900;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 13px;
+  color: #ffffff;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  
+}
+
+
+
+.footer-bottom, .footer-bottom p {
+  color: #ffffff !important;
+}
+ </style>
+
+
+</body>
+</html>>
