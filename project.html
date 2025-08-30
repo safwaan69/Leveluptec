@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level Uptec Consultancy - About Us</title>
+
+   <title>Sticky Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+    <!-- Navigation section -->
+<nav class="navbar fixed-top px-4 py-3 justify-content-between align-items-center">
+    <div class="logo fw-bold fs-4 text-success">Level Upec Consultancy</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+   
+   
+  <div class="overlay" id="overlay">
+    <div class="menu-item" style="--bg-color: #555;"><a href="index.html">Home</a></div>
+    <div class="menu-item" style="--bg-color: #b3432c;"><a href="about.html">About</a></div>
+    <div class="menu-item" style="--bg-color: #1f244e;"><a href="service.html">Our Services</a></div>
+    <div class="menu-item" style="--bg-color: #487c6a;"><a href="project.html">Our Projects</a></div>
+    <div class="menu-item" style="--bg-color: #9c7b45;"><a href="contact.html">Contact Us</a></div>
+  </div>
+
+      
+<section class="hero-section" aria-labelledby="hero-headline">
+        <div class="hero-content">
+            <h1 class="hero-headline" id="hero-headline">Our Projects</h1>
+            <p class="hero-description">
+               “Explore our projects that showcase innovation, quality, and a commitment to excellence.”
+            </p>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+
+    
+ <style>
+       
+/* As usual Normal starting point of css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+}
+
+.navbar {
+  z-index: 2000;
+  background: transparent; /* Removed black background */
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  z-index: 2100;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: rgb(255, 255, 255); /* This sets the hamburger lines to black */
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(9px);
+  background: rgb(255, 255, 255); /* This keeps the first line black when active */
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-9px);
+  background: rgb(255, 255, 255); /* This keeps the third line black when active */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.overlay.active {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.menu-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  transform: translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.menu-item a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.menu-item.show {
+  transform: translateY(0);
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 1rem !important;
+    margin-top: -8px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+.navbar .logo {
+  
+  color: white!important;
+  
+}
+
+/* Hero Section */
+      /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-headline {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 22px;
+            height: 38px;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .scroll-indicator span::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: scroll 1.5s infinite;
+        }
+
+        @keyframes scroll {
+            0% { opacity: 0; transform: translate(-50%, 0); }
+            50% { opacity: 1; transform: translate(-50%, 12px); }
+            100% { opacity: 0; transform: translate(-50%, 24px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                    url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600');
+            }
+
+            .hero-content {
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .hero-headline {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                line-height: 1.3;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+                max-width: 85%;
+            }
+
+            .scroll-indicator {
+                bottom: 20px;
+            }
+
+            .scroll-indicator span {
+                width: 18px;
+                height: 32px;
+            }
+
+            .scroll-indicator span::after {
+                width: 4px;
+                height: 4px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content {
+                padding: 10px;
+            }
+
+            .hero-headline {
+                font-size: 1.6rem;
+            }
+
+            .hero-description {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .scroll-indicator {
+                bottom: 15px;
+            }
+        }
+    </style>
+
+
+
+<script>
+/***********************/
+/* Hamburger section */
+/***********************/
+const hamburger = document.getElementById('hamburger'); 
+const overlay = document.getElementById('overlay');
+const menuItems = document.querySelectorAll('.menu-item');
+
+let isOpen = false;
+
+hamburger.addEventListener('click', () => {
+  isOpen = !isOpen;
+  hamburger.classList.toggle('active');
+  overlay.classList.toggle('active');
+
+  menuItems.forEach((item, index) => {
+    setTimeout(() => {
+      if (isOpen) {
+        item.classList.add('show');
+      } else {
+        item.classList.remove('show');
+      }
+    }, index * 150);
+  });
+});
+</script>
+
+</head>
+<body>
+
+ 
+
+
+
+ <!-- project section -->
+<section class="project-section" id="projects">
+  <h1 class="project-title-center">Our Projects</h1>
+  <div class="project-container">
+    <div class="project-item" style="--order: 1">
+      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+        <div class="project-overlay"></div>
+        <div class="project-text-box">
+          <h3 class="project-title">Modern Residential Haven</h3>
+          <p class="project-description">A minimalist home with sleek glass and concrete design.</p>
+          <a href="#" class="read-more" aria-label="Read more about Modern Residential Haven">Read More</a>
+        </div>
+        <div class="project-extra-text">
+          <p>Built in 2020, this modern residence uses floor-to-ceiling glass windows and polished concrete for an open, airy aesthetic.</p>
+        </div>
+      </div>
+    </div>
+    <div class="project-item" style="--order: 2">
+      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1483653364400-eedcfb9f1f88?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+        <div class="project-overlay"></div>
+        <div class="project-text-box">
+          <h3 class="project-title">Urban Commercial Hub</h3>
+          <p class="project-description">A vibrant office space with steel and wood accents.</p>
+          <a href="#" class="read-more" aria-label="Read more about Urban Commercial Hub">Read More</a>
+        </div>
+        <div class="project-extra-text">
+          <p>Completed in 2021, this commercial building features exposed steel beams and sustainable timber, blending urban and natural elements.</p>
+        </div>
+      </div>
+    </div>
+    <div class="project-item" style="--order: 3">
+      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+        <div class="project-overlay"></div>
+        <div class="project-text-box">
+          <h3 class="project-title">Eco-Friendly Community Center</h3>
+          <p class="project-description">A sustainable design with green roofs and solar panels.</p>
+          <a href="#" class="read-more" aria-label="Read more about Eco-Friendly Community Center">Read More</a>
+        </div>
+        <div class="project-extra-text">
+          <p>This 2022 project incorporates green roofs and solar panels, achieving LEED certification for its eco-conscious materials and design.</p>
+        </div>
+      </div>
+    </div>
+    <div class="project-item" style="--order: 4">
+      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&w=1200&q=80');">
+        <div class="project-overlay"></div>
+        <div class="project-text-box">
+          <h3 class="project-title">Historic Restoration Project</h3>
+          <p class="project-description">Restored 19th-century facade with modern interiors.</p>
+          <a href="#" class="read-more" aria-label="Read more about Historic Restoration Project">Read More</a>
+        </div>
+        <div class="project-extra-text">
+          <p>This 2023 restoration preserves the original brick facade while integrating modern interiors with energy-efficient systems.</p>
+        </div>
+      </div>
+    </div>
+    <div class="project-item extra-project d-none" style="--order: 5">
+      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&w=1200&q=80');">
+        <div class="project-overlay"></div>
+        <div class="project-text-box">
+          <h3 class="project-title">Futuristic Urban Tower</h3>
+          <p class="project-description">A high-rise with curved glass and smart technology.</p>
+          <a href="#" class="read-more" aria-label="Read more about Futuristic Urban Tower">Read More</a>
+        </div>
+        <div class="project-extra-text">
+          <p>Constructed in 2024, this 30-story tower features curved glass panels and integrated smart systems for energy efficiency.</p>
+        </div>
+      </div>
+    </div>
+    <div class="project-item extra-project d-none" style="--order: 6">
+      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&w=1200&q=80');">
+        <div class="project-overlay"></div>
+        <div class="project-text-box">
+          <h3 class="project-title">Cultural Heritage Museum</h3>
+          <p class="project-description">A museum blending traditional and modern elements.</p>
+          <a href="#" class="read-more" aria-label="Read more about Cultural Heritage Museum">Read More</a>
+        </div>
+        <div class="project-extra-text">
+          <p>Opened in 2025, this museum combines traditional stonework with modern steel frameworks to celebrate cultural heritage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-button-container">
+    <button id="showMoreProjects" class="read-more-button" aria-label="Show more projects">
+      Show More <span class="project-count">+2</span>
+    </button>
+  </div>
+</section>
+
+<style>
+
+
+/* Project section */
+.project-section {
+  padding: 80px 15px;
+  background: linear-gradient(135deg, #fafafa, #e6e6e6);
+  color: #1a2a44;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+.project-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: -1;
+  animation: pulse 15s infinite alternate; /* Slower for elegance */
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.2; }
+  100% { transform: scale(1.1); opacity: 0.05; }
+}
+.project-title-center {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a2a44;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  opacity: 0;
+  animation: fadeInTitle 1s ease-in-out forwards;
+}
+@keyframes fadeInTitle {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+.project-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  position: relative;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 0.2s);
+}
+.project-item:hover {
+  border-image: linear-gradient(to right, #ffd700, #1abc9c) 1;
+}
+.project-item.hidden,
+.d-none {
+  display: none !important;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.project-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  max-height: 300px;
+  background: no-repeat center center;
+  background-size: cover;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.project-item:hover .project-image {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(44, 62, 80, 0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+.project-item:hover .project-overlay {
+  opacity: 1;
+  filter: blur(2px);
+}
+.project-text-box {
+  position: absolute;
+  top: 0; /* Moved to top-right */
+  right: 0;
+  width: 50%;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(26, 42, 68, 0.95), rgba(26, 188, 156, 0.7));
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 0 8px 0 8px;
+  opacity: 0;
+  transform: translateY(-100%); /* Slide down on hover */
+  transition: opacity 0.4s ease, transform 0.4s ease 0.1s;
+  z-index: 2;
+}
+.project-item:hover .project-text-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-extra-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 30%;
+  background: rgba(255, 215, 0, 0.2);
+  border-left: 4px solid #ffd700;
+  color: #1a2a44;
+  padding: 15px;
+  border-radius: 0 0 8px 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.4s ease, transform 0.4s ease 0.2s;
+  z-index: 2;
+}
+.project-item:hover .project-extra-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+.project-extra-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  color: #1a2a44;
+  margin: 0;
+}
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+.project-item:hover .project-title {
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+.project-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  margin-bottom: 8px;
+}
+.project-item:hover .project-description {
+  color: #ffffff;
+}
+.read-more {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: #1abc9c;
+  text-decoration: underline;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+.read-more:focus {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+.project-item:hover .read-more {
+  color: #16a085;
+  transform: scale(1.1);
+}
+.project-button-container {
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+}
+.read-more-button, #showMoreProjects {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 30px;
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, filter 0.3s ease;
+  opacity: 0;
+  animation: fadeInButton 1s ease-in-out 0.5s forwards;
+}
+.read-more-button:hover, #showMoreProjects:hover {
+  background: linear-gradient(to right, #c0392b, #a32b1e);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+  filter: brightness(1.2);
+}
+.read-more-button:focus, #showMoreProjects:focus {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+.project-count {
+  display: inline-block;
+  background: #ffd700;
+  color: #1a2a44;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+  animation: fadeInBadge 1s ease-in-out 0.7s forwards;
+  opacity: 0;
+}
+@keyframes fadeInButton {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInBadge {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@media (max-width: 768px) {
+  .project-section {
+    padding: 40px 15px;
+  }
+  .project-container {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    column-gap: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .project-item {
+    margin: 0 !important;
+    padding: 8px;
+    border: none; /* Remove gradient border on mobile for simplicity */
+  }
+  .project-image {
+    max-height: 250px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .project-text-box, .project-extra-text {
+    width: 60%;
+    height: 35%;
+    padding: 10px;
+    transform: scale(0.95); /* Simplified animation for mobile */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .project-item:hover .project-text-box,
+  .project-item:hover .project-extra-text {
+    transform: scale(1);
+  }
+  .project-text-box {
+    transform: translateY(-100%); /* Maintain slide-down for mobile */
+  }
+  .project-item:hover .project-text-box {
+    transform: translateY(0);
+  }
+  .project-extra-text {
+    transform: translateX(-100%);
+  }
+  .project-item:hover .project-extra-text {
+    transform: translateX(0);
+  }
+  .project-title {
+    font-size: 1rem;
+  }
+  .project-description {
+    font-size: 0.8rem;
+  }
+  .project-extra-text p {
+    font-size: 0.75rem;
+  }
+  .read-more {
+    font-size: 0.75rem;
+  }
+  .read-more-button, #showMoreProjects {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+  .project-count {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function showMoreProjects() {
+    const hiddenProjects = document.querySelectorAll('.project-item.extra-project.d-none');
+    hiddenProjects.forEach(project => {
+      project.classList.remove('d-none');
+    });
+    document.querySelector('.project-button-container').style.display = 'none';
+  }
+
+  const showMoreButton = document.querySelector('#showMoreProjects');
+  if (showMoreButton) {
+    showMoreButton.addEventListener('click', showMoreProjects);
+  }
+});
+</script>
+
+
+
+
+
+
+
+<!-- =========================
+     PHOTO SHOWCASE (Pexels)
+     - 4 cols desktop, 3 cols lg, 2 cols md, 2 cols mobile
+     - Hover zoom + overlay + subtle tilt
+     - Lazy-loaded, with Unsplash fallback if any image fails
+   ========================= -->
+<div class="row my-5">
+  <div class="col-12">
+    <h3 class="mb-4 text-center">Our Journey in Frames</h3>
+
+    <div class="lu-image-grid">
+      <!-- Card 1 -->
+      <figure class="lu-image-card" aria-label="Collaborative strategy session">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Team collaborating around a laptop"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Collaborative Strategy</span></figcaption>
+      </figure>
+
+      <!-- Card 2 -->
+      <figure class="lu-image-card" aria-label="Planning and documentation">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Consultant writing plans"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Planning in Motion</span></figcaption>
+      </figure>
+
+      <!-- Card 3 -->
+      <figure class="lu-image-card" aria-label="Analytics and insights">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Charts and analytics on a laptop"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Data-Driven Insights</span></figcaption>
+      </figure>
+
+      <!-- Card 4 -->
+      <figure class="lu-image-card" aria-label="Performance metrics review">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3184636/pexels-photo-3184636.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="People reviewing performance metrics"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Performance Reviews</span></figcaption>
+      </figure>
+
+      <!-- Card 5 -->
+      <figure class="lu-image-card" aria-label="Workshop and coaching">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/3730765/pexels-photo-3730765.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Workshop session with laptops"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Workshops & Coaching</span></figcaption>
+      </figure>
+
+      <!-- Card 6 -->
+      <figure class="lu-image-card" aria-label="Presentation and strategy board">
+        <img
+          loading="lazy"
+          src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+          alt="Presentation in meeting room"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=800&q=80';"
+        />
+        <figcaption class="lu-overlay"><span>Present • Align • Act</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<style>
+
+    .mb-4.text-center {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .mb-4.text-center {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; /* smaller on tablets/mobiles */
+    font-weight: 700;
+  }
+}
+  /* Grid: 4 cols desktop, 3 lg, 2 md, 2 mobile (space-saving) */
+  .lu-image-grid{
+         
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:16px;
+  }
+  @media (max-width: 1200px){ .lu-image-grid{ grid-template-columns:repeat(3,1fr);} }
+  @media (max-width: 992px){  .lu-image-grid{ grid-template-columns:repeat(2,1fr);} }
+  @media (max-width: 576px){  .lu-image-grid{ grid-template-columns:repeat(2,1fr);} } /* 2 cols on mobile */
+
+  .lu-image-card{
+    position:relative;
+    border-radius:14px;
+    overflow:hidden;
+    cursor:pointer;
+    background:#eee;
+    /* consistent shape */
+    aspect-ratio: 4 / 3;
+    transform: perspective(700px) rotateX(0) rotateY(0) translateZ(0);
+    transition: transform .35s ease, box-shadow .35s ease;
+    will-change: transform;
+  }
+  .lu-image-card img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition: transform .6s ease, filter .6s ease;
+    filter: saturate(0.95) contrast(1.02);
+  }
+  .lu-image-card:hover img{ transform: scale(1.06); filter: saturate(1.05) contrast(1.05); }
+  .lu-image-card:hover{ box-shadow:0 16px 40px rgba(0,0,0,.16); }
+
+  .lu-overlay{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(180deg, rgba(10,37,64,.08) 0%, rgba(10,37,64,.55) 100%);
+    color:#fff; opacity:0; transition: opacity .35s ease;
+    padding:10px; text-align:center;
+  }
+  .lu-overlay span{
+    font-weight:600; letter-spacing:.3px; line-height:1.2;
+    text-shadow:0 2px 8px rgba(0,0,0,.35);
+  }
+  .lu-image-card:hover .lu-overlay{ opacity:1; }
+
+  /* Reveal on scroll */
+  .lu-image-card{ opacity:0; transform: translateY(16px) perspective(700px) rotateX(0) rotateY(0); }
+  .lu-image-card.lu-visible{ opacity:1; transform: translateY(0) perspective(700px) rotateX(0) rotateY(0); transition: opacity .6s ease, transform .6s ease; }
+</style>
+
+<script>
+  // Subtle tilt on hover (desktop only)
+  (function(){
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if(isTouch) return; // skip on touch devices
+
+    document.querySelectorAll('.lu-image-card').forEach(card=>{
+      const damp = 12; // lower = stronger tilt
+      card.addEventListener('mousemove', (e)=>{
+        const b = card.getBoundingClientRect();
+        const x = e.clientX - b.left, y = e.clientY - b.top;
+        const rx = ((y / b.height) - 0.5) * -damp;
+        const ry = ((x / b.width) - 0.5) * damp;
+        card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      });
+      card.addEventListener('mouseleave', ()=>{
+        card.style.transform = 'perspective(700px) rotateX(0) rotateY(0)';
+      });
+    });
+  })();
+
+  // Intersection observer: reveal & gentle stagger
+  (function(){
+    const cards = document.querySelectorAll('.lu-image-card');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('lu-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach((c,i)=>{
+      c.style.transitionDelay = (i * 70) + 'ms';
+      io.observe(c);
+    });
+  })();
+</script>
+
+
+
+
+
+<!-- =========================
+        FOOTER section
+   ========================= -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="https://i.ibb.co/PzQcjbcH/Whats-App-Image-2025-04-06-at-12-21-30-41699aba.jpg" alt="Level UpTec Logo" class="footer-logo" />
+      <p>WELCOME TO THE WORLD OF SIGNATURE STYLE ARCHITECTURE & INTERIORS BY LEVEL UPTEC CONSULTANCY.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Testimonial</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>PROJECTS</h4>
+      <ul>
+        <li><a href="#">Architecture</a></li>
+        <li><a href="#">Interior</a></li>
+        <li><a href="#">Cultural Complexes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>NEWSLETTER</h4>
+      <div class="newsletter-box">
+        <input type="email" placeholder="Email Address*" />
+        <button>SEND</button>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/level-uptec-consultancy-18a081374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://youtube.com/@leveluptecconsultancy?si=6FT-G3ZwhslS2qML "><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/leveluptec?igsh=MXE4cG5xNXJlZDJjMA== "><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/share/16KYLGiBtF/ "><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/qr/WEEU7EQMUOM4G1"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Level UpTec Consultancy - Best Architecture & Interior Design Firm. All Rights Reserved.</p>
+    <p>Website by Kashmir Web Works Team</p>
+  </div>
+</footer> 
+
+<style>
+
+    /* Footer section */
+    .footer {
+  background: #1d1d1d;
+  color: #fff;
+  padding: 60px 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  max-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff9900;
+}
+
+.footer-newsletter {
+  flex: 1 1 250px;
+}
+
+.footer-newsletter h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.newsletter-box {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 100%; /* <-- Prevents overflow */
+  flex-wrap: wrap;  /* <-- Allows wrapping on smaller screens */
+}
+
+
+@media (max-width: 576px) {
+  .newsletter-box input {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-box button {
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+
+.newsletter-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+.newsletter-box button {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  font-weight: bold;
+}
+
+.newsletter-box button:hover {
+  background: #e58000;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff9900;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 13px;
+  color: #ffffff;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  
+}
+
+
+
+.footer-bottom, .footer-bottom p {
+  color: #ffffff !important;
+}
+ </style>
+
+
+</body>
+</html>>
