@@ -1238,6 +1238,1159 @@ hamburger.addEventListener('click', () => {
     </div>
   </div>
 </section>
+<div style="height:10vh;"></div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     Our team section
+     -
+   ========================= -->
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@1,2,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/microtip@0.2.2/microtip.css" xintegrity="sha384-N6fW49x7o7a/u0152F/f2D+x1wGz+0n87Qz5k285Xm5M6L6o4u9f9b5c7+y4P9e4" crossorigin="anonymous">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+
+    
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+ <section class="project-title-section">
+  <h1 class="project-title">our Team Members </h1>
+</section>
+
+<style>
+.project-title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+  height: 20vh; /* Adjust vertical spacing as needed */
+}
+
+.project-title {
+  font-weight: 300;
+  font-size: clamp(3rem, 10vw, 6rem) !important;
+   font-family: 'Inter', sans-serif ! important;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Decorative lines */
+.project-title::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #9ca3af);
+  border-radius: 2px;
+}
+
+.project-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: #d1d5db;
+  border-radius: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-title { font-size: clamp(2rem, 12vw, 4rem); letter-spacing: 2px; }
+  .project-title::before { width: 60px; height: 3px; bottom: -8px; }
+  .project-title::after { width: 40px; height: 2px; top: -8px; }
+}
+</style>
+
+
+
+
+
+    <style>
+    /*=================
+       VARS
+    ===================*/
+    :root {
+        /* Set text to black by default for the main site, but it will be overridden by the dark section. */
+        --bg: #ffffff;
+        --text: #000000; /* Changed from #ffffff to avoid white on white on your main site */
+        --accent: #000000;
+        --radius: 2.5rem;
+        /* Original shadow was 0 0.4rem 1rem rgba(0, 0, 0, 0.1); */
+        --shadow: 0 0.4rem 2rem rgba(255, 255, 255, 0.05); /* Lighter shadow for the 'glow' effect */
+        --anim: cubic-bezier(0, 0, 0.25, 1);
+        --microtip-font-size: 11px;
+        --microtip-transition-easing: var(--anim);
+        --microtip-transition-duration: 0.3s;
+    }
+
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: "Switzer", sans-serif;
+        box-sizing: border-box; /* Crucial for preventing layout shifts based on padding */
+    }
+
+    *::selection {
+        background: rgba(255, 0, 50, 0.3);
+    }
+
+    [aria-label][role~="tooltip"]::after {
+        border-radius: var(--radius);
+    }
+
+    [aria-label][role~="tooltip"]::before {
+        display: none;
+    }
+
+    /* 🔥 FIX: REMOVED background: black; and color: white; from body */
+    body {
+        /* background: black; <-- DELETED */
+        color: var(--text); /* Use default text color for the rest of the site */
+        font-family: "Switzer", sans-serif;
+        /* padding: 4rem 0; <-- MOVED to .profile-cards-dark-section */
+        min-height: 100vh;
+        margin: 0; 
+        cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzlkOWQ5ZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJtMyAzbDcgMTlsMi4wNTEtNi4xNTRhNiA2IDAgMCAxIDMuNzk1LTMuNzk1TDIyIDEweiIgLz4KPC9zdmc+"),
+            default;
+    }
+
+    /* 🔥 FIX: New wrapper class for the dark section */
+    .profile-cards-dark-section {
+        background: rgb(30, 28, 28);
+        color: white; /* Ensure all text within this specific section is white */
+        padding: 4rem 0; /* Vertical padding for this section */
+        width: 100%; /* Ensure it spans the full width */
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    /* === FIX: Force white color for all text within cards === */
+    .cards * {
+        color: white !important;
+    }
+    
+    /* Override specific black elements that must stay black */
+    .card-button-call * {
+        color: var(--accent) !important; /* This should be black (#000000) */
+    }
+    .handle {
+        color: black !important;
+    }
+    /* === END FIX === */
+
+    .pointer,
+    a,
+    button {
+        cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDE0IDE0Ij4KCTxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2I1YjFiMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMTAuNSAzYTIgMiAwIDAgMSAxLjU5IDIuMjRsLS42MSA0LjI3YTEgMSAwIDAgMS0xIC44Nkg0YTEgMSAwIDAgMS0uOTMtLjYzTDIgMTAuMjFhMiAyIDAgMCAxIDEtMi41M0w0LjM1IDdWMmExLjUgMS41IDAgMCAxIDMgMHYzLjV6IiBzdHJva2Utd2lkdGg9IjEiIC8+Cjwvc3ZnPg=="),
+            default;
+    }
+
+    .grab {
+        cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y5ZjlmOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiPgoJCTxwYXRoIGQ9TTE4IDExLjVWOUEyIDIgMCAwIDAtMTYgN0EyIDIgMCAwIDAtMTggN0ExIDIgMCAwIDAtMTggOVYxMC40bTAtLjRWOEEyIDIgMCAwIDAtMTggNkEyIDIgMCAwIDAtMjAgNlY4bTAtLjFWOUEyIDIgMCAwIDAtMjIgN0EyIDIgMCAwIDAtMjQgN1YxMm0wIDBBMiAyIDAgMCAwLTI0IDEwQTIgMiAwIDAgMC0yNiAxMiIgLz4KCQk8cGF0aD5NMTggMTFBMiAyIDAgMSAxIDQgMFYxNEE4IDggMCAwIDEtOCA4SDdBOEIDggMCAwIDEtOCA4QTIgMiAwIDEgMSA0IDBaIiAvPgoJPC9nPg=="),
+            grab;
+    }
+
+    .grabbing {
+        cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiPgoJCTxwYXRoIGQ9TTE4IDExLjVWOUEyIDIgMCAwIDAtMTYgN0EyIDIgMCAwIDAtMTggN0ExIDIgMCAwIDAtMTggOVYxMC40bTAtLjRWOEEyIDIgMCAwIDAtMTggNkEyIDIgMCAwIDAtMjAgNlY4bTAtLjFWOUEyIDIgMCAwIDAtMjIgN0EyIDIgMCAwIDAtMjQgN1YxMm0wIDBBMiAyIDAgMCAwLTI0IDEwQTIgMiAwIDAgMC0yNiAxMiIgLz4KCQk8cGF0aD5NMTggMTFBMiAyIDAgMSAxIDQgMFYxNEE4IDggMCAwIDEtOCA4SDdBOEIDggMCAwIDEtOCA4QTIgMiAwIDEgMSA0IDBaIiAvPgoJPC9nPg=="),
+            grabbing !important;
+    }
+
+    /*=================
+       CARDS
+    ===================*/
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* Desktop width control */
+        max-width: 70%; 
+        margin: 0 auto; 
+        width: 100%; 
+    }
+
+    .card-wrap {
+        position: relative;
+        /* Default: Desktop (4 columns) */
+        width: calc(25% - 2rem); 
+        margin: 1rem; /* Spacing for desktop */
+    }
+
+    /* --- Default Card Sizing (Desktop) --- */
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 22rem;
+        width: 14rem;
+        min-height: 22rem;
+        min-width: 14rem;
+        max-height: 22rem;
+        max-width: 14rem;
+        margin: 0; /* Margin is on .card-wrap */
+        padding: 1rem;
+        overflow: hidden;
+        
+        /* 🔥 BOLD WHITE LINE IMPLEMENTATION */
+        border: 2px solid rgba(255, 255, 255, 0.9); 
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+
+        border-radius: var(--radius);
+        position: relative;
+        opacity: 0;
+        transition: opacity 0.4s var(--anim), transform 0.3s var(--anim);
+    }
+
+    /*=======================================
+       MOBILE/SMALL SCREEN STYLES (2 COLUMNS)
+    =======================================*/
+    @media (max-width: 768px) {
+        .cards {
+            /* FIX 1: Remove horizontal padding to prevent container overflow on small screens */
+            max-width: 100%;
+            padding: 0; 
+            margin-top: 2rem; /* Add some top margin to compensate for removal of vertical padding on body */
+        }
+
+        .card-wrap {
+            /* FIX 2: Adjusted calculation to guarantee separation. 
+            We use 0.6rem margin (total 1.2rem horizontal margin per item).
+            Width = 50% - (2 * 0.6rem) = 50% - 1.2rem. This creates a guaranteed gutter.
+            */
+            width: calc(50% - 1.2rem); 
+            margin: 0.6rem; 
+        }
+        
+        .card {
+            /* TIGHTER SIZING to fit the now narrower 50% columns */
+            height: 16rem; 
+            width: 100%; 
+            min-height: 16rem;
+            min-width: 100%; 
+            max-height: 16rem;
+            max-width: 100%;
+            
+            padding: 0.75rem; /* Smaller padding inside the card */
+        }
+        
+        /* Text Size Adjustments */
+        .card-name-wrap { /* TARGETED for vertical space reduction */
+            margin: 0.1rem 0; 
+        }
+
+        .card-name {
+            font-size: 1rem; /* Smaller name */
+            margin-top: 0.15rem; /* Reduced margin to tighten spacing */
+        }
+        
+        .card-verification, .card-status {
+             /* Retain existing scale/position fixes */
+            transform: scale(0.8);
+            top: 0.5rem;
+            left: 0.5rem;
+        }
+
+        .card-handle {
+            transform: scale(0.8);
+            right: 0.5rem;
+            top: 0.5rem;
+        }
+
+        .card-handle-tip, .card-verification {
+            /* Reset scale on nested elements if needed */
+            transform: none; 
+        }
+
+        .card-tags {
+            margin: 0.2rem 0; /* Reduced vertical margin */
+        }
+        
+        .card-tag {
+            font-size: 0.6rem; /* Slightly smaller tag text (was 0.65rem) */
+            padding: 0.1rem 0.3rem;
+            margin-right: 0.3rem;
+        }
+        
+        .card-description {
+            font-size: 0.65rem; /* Smaller description text (was 0.7rem) */
+            line-height: 1.3; /* Tighter line height (was 1.4) */
+            /* Reduce vertical margin to fit content */
+            margin: 0.2rem 0 0.4rem 0; /* Reduced vertical margin to prevent overlap */
+            opacity: 0.7; 
+        }
+        
+        /* Button Adjustments (slightly smaller to save vertical space) */
+        .card-button {
+            padding: 0.2rem 0.2rem 0.2rem 0.4rem;
+        }
+        .card-button-text {
+            font-size: 0.75rem; /* Smaller button text */
+            margin-left: 0.4rem;
+        }
+        .card-button-call {
+            min-height: 2.1rem; /* Slightly smaller call button for more space */
+            min-width: 2.1rem;
+        }
+        .card-button-call-icon {
+            font-size: 0.9rem; /* Smaller icon */
+        }
+
+        /* Tighter margin for ultra-small screens to be safe */
+        @media (max-width: 420px) {
+            .card-wrap {
+                width: calc(50% - 1rem); /* Even narrower */
+                margin: 0.5rem;
+            }
+            
+        }
+    }
+
+    /*=======================================
+       ULTRA SMALL SCREEN STYLES (Max 480px)
+       Further reducing elements to ensure fit on smaller phones.
+    =======================================*/
+    @media (max-width: 480px) {
+        .card {
+            height: 15rem; /* Reduce card height slightly */
+        }
+        .card-name {
+            font-size: 0.9rem; /* Further reduce name font size */
+        }
+        .card-name-wrap {
+            margin: 0; /* Eliminate margin above name entirely */
+        }
+        .card-tags {
+            margin: 0.1rem 0; /* Tighter spacing for tags */
+        }
+        .card-tag {
+            font-size: 0.55rem; /* Make tag text smaller */
+        }
+        .card-rating-text {
+            /* Reduce font size for ratings text to 0.7rem */
+            font-size: 0.5rem !important; 
+        }
+        .card-description {
+            /* ENSURING MINIMAL DESCRIPTION FONT SIZE/MARGIN ON SMALL PHONES */
+            font-size: 0.6rem !important; 
+            line-height: 1.25 !important; 
+            margin: 0.1rem 0 0.4rem 0 !important; 
+            opacity: 0.7; /* Keep opacity */
+        }
+        .card-button-text {
+             font-size: 0.7rem; /* Make button text smaller */
+        }
+    }
+
+    /*=======================================
+       TINY SCREEN STYLES (Max 375px)
+       Final adjustments for the absolute smallest screens (like iPhone SE/320px).
+    =======================================*/
+    @media (max-width: 375px) {
+        .card {
+            height: 14rem; /* Reduce card height slightly further */
+            padding: 0.5rem; /* Reduced inner padding */
+        }
+
+        /* Scale down the entire card content group */
+        .card-content {
+            transform: scale(0.95);
+            transform-origin: bottom left;
+            padding-bottom: 0.2rem;
+        }
+        
+
+        .card-name {
+            font-size: 0.85rem; 
+        }
+
+        .card-tag {
+            font-size: 0.5rem; /* Tiny tag text */
+            padding: 0.05rem 0.2rem;
+        }
+        
+        .card-description {
+            /* ENSURING ABSOLUTE MINIMAL DESCRIPTION FONT SIZE/MARGIN ON TINY PHONES */
+            font-size: 0.55rem !important; 
+            line-height: 1.2 !important;
+            margin: 0.05rem 0 0.3rem 0 !important;
+            opacity: 0.7; /* Keep opacity */
+        }
+        
+        .card-rating-text {
+            /* Reduce font size for ratings text to 0.7rem */
+            font-size: 0.45rem !important; 
+        }
+
+        .card-button-text {
+             font-size: 0.65rem;
+        }
+
+        .card-button-call {
+            min-height: 2rem;
+            min-width: 2rem;
+        }
+    }
+
+
+    /* --- END MOBILE/SMALL SCREEN STYLES --- */
+
+    /* Existing styles below (no changes needed for desktop mode behavior) */
+
+    .card-filter {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 9;
+        pointer-events: none;
+        backdrop-filter: blur(0.2rem);
+        opacity: 0;
+        transition: opacity 0.1s var(--anim);
+    }
+
+    .draggable--over .card {
+        opacity: 0.5 !important;
+        filter: blur(0.5rem) !important;
+        transform: scale(0.8) !important;
+        box-shadow: none;
+        border: none;
+    }
+
+    .draggable-mirror {
+        z-index: 99;
+        opacity: 1;
+    }
+
+    .draggable-mirror .card {
+        transform: scale(0.98) rotate(5deg);
+    }
+
+    .draggable-mirror .card-filter {
+        opacity: 1;
+    }
+
+    /*=================
+       CARDS BACKGROUND
+    ===================*/
+
+    .card-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; 
+        z-index: -1;
+        pointer-events: none;
+        user-select: none;
+        object-fit: cover; 
+        object-position: center; 
+    }
+
+    .card-content {
+        position: relative;
+        z-index: 3;
+        padding: 0 0.25rem;
+    }
+
+    .card-status {
+        margin: 0.25rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(0.5rem);
+        width: 5rem;
+        height: 1.5rem;
+        border-radius: var(--radius);
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        pointer-events: none;
+        user-select: none;
+        /* Reset transform on desktop */
+        transform: none; 
+    }
+
+    .card-status-dot {
+        height: 0.3rem;
+        width: 0.3rem;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.75rem;
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
+
+    .card-status-dot:after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: inherit;
+        border-radius: 50%;
+        animation: pulse 1s var(--anim) infinite;
+    }
+
+    .card-status-dot.online {
+        background: mediumseagreen;
+    }
+    .card-status-dot.offline {
+        background: grey;
+    }
+
+    .card-status-dot.offline:after {
+        animation: none;
+    }
+
+    .card-status-text {
+        font-size: 0.7rem;
+        opacity: 0.75;
+    }
+
+    .card-handle {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(0.1rem);
+        border-radius: var(--radius);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Reset transform on desktop */
+        transform: none; 
+    }
+
+    .card-handle-tip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .handle {
+        width: 100%;
+        height: 1.25rem;
+        color: black;
+    }
+
+    .card-name-wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0.75rem 0;
+    }
+
+    .card-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-right: 0.5rem;
+    }
+
+    .card-verification {
+        font-size: 1.25rem;
+        color: var(--bg);
+        filter: drop-shadow(0 0 0.5rem var(--accent));
+    }
+
+    .card-tags {
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        margin: 0.5rem 0;
+    }
+
+    .card-tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.5rem);
+        padding: 0.3rem 0.5rem;
+        border-radius: var(--radius);
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+        pointer-events: none;
+    }
+
+    .card-tag-icon {
+        margin-right: 0.25rem;
+    }
+
+    .card-rating-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-rating-star {
+        font-size: 0.5rem;
+    }
+
+    .card-rating-stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-description {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        font-weight: 300;
+        margin: 0.5rem 0 1rem 0;
+        /*initial*/
+        opacity: 0;
+    }
+
+    .card-button {
+        padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-button-call {
+        background: var(--bg);
+        min-height: 2.5rem;
+        min-width: 2.5rem;
+        border-radius: 50%;
+        color: var(--accent);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    }
+
+    .card-button-text {
+        margin-left: 0.5rem;
+        font-weight: 500;
+        letter-spacing: -0.02rem;
+        word-spacing: 0.05rem;
+        font-size: 0.85rem;
+    }
+
+    .card-button-call-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .card-fade {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 20rem;
+        width: 100%;
+        z-index: 0;
+        opacity: 0.75;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        pointer-events: none;
+    }
+    .card-role {
+    display: inline-block;
+    font-weight: 800;          /* Extra Bold */
+    font-size: 0.9rem;         /* Slightly larger than description */
+    color: #ffffff;            /* Pure White */
+    text-transform: uppercase; /* Makes it look like a header */
+    letter-spacing: 0.05rem;   /* Slight spacing for readability */
+    margin-bottom: 0.3rem;     /* Space between title and text */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Glow effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Optional: Underline */
+    padding-bottom: 0.1rem;
+}
+
+/* Mobile Adjustment (Optional) - Keeps it proportionate on phones */
+@media (max-width: 768px) {
+    .card-role {
+        font-size: 0.75rem;
+        margin-bottom: 0.2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+    <div class="profile-cards-dark-section"> 
+        <section class="cards">
+
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-filter"></div>
+                    <img src="https://i.ibb.co/bjvbhGzc/Gemini-Generated-Image-gwfb1fgwfb1fgwfb.png" alt="bg" class="card-bg">
+
+                    <div class="card-status">
+                        <div class="card-status-dot online"></div>
+                        <div class="card-status-text">Online</div>
+                    </div>
+
+                    <div class="card-handle grab">
+                        <div class="card-handle-tip" aria-label="Drag" data-microtip-position="left" role="tooltip">
+                            <span class="iconify handle" data-icon="ic:outline-drag-indicator"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-name-wrap">
+                            <div class="card-name">Rehan</div>
+                            <div class="card-verfied" aria-label="Verified" data-microtip-position="right" role="tooltip">
+                                <span class="card-verification iconify" data-icon="si:verified-fill"></span>
+                            </div>
+                        </div>
+
+                        <div class="card-tags">
+                            <div class="card-tag">
+                                <div class="card-rating-text">4.9</div>
+                                <div class="card-rating-stars">
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                </div>
+                            </div>
+                            <div class="card-tag">
+                                <span class="iconify card-tag-icon" data-icon="line-md:account"></span>
+                                <div class="card-rating-text">3.1 K</div>
+                            </div>
+                        </div>
+
+                        <div class="card-description">
+    <span class="card-role">Lead Architect</span><br>
+    turning raw concepts into detailed 2D floor plans and elevations using AutoCAD.
+</div>
+
+                        <div class="card-button pointer">
+                            <div class="card-button-text pointer">Get In Touch</div>
+                            <div class="card-button-call pointer">
+                                <span class="card-button-call-icon iconify pointer" data-icon="line-md:phone-call-loop"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-fade"></div>
+                </div>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-filter"></div>
+                    <img src="https://i.ibb.co/bjvbhGzc/Gemini-Generated-Image-gwfb1fgwfb1fgwfb.png" alt="bg" class="card-bg">
+
+                    <div class="card-status">
+                        <div class="card-status-dot online"></div>
+                        <div class="card-status-text">Online</div>
+                    </div>
+
+                    <div class="card-handle grab">
+                        <div class="card-handle-tip" aria-label="Drag" data-microtip-position="left" role="tooltip">
+                            <span class="iconify handle" data-icon="ic:outline-drag-indicator"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-name-wrap">
+                            <div class="card-name">Suhail Bhat</div>
+                            <div class="card-verfied" aria-label="Verified" data-microtip-position="right" role="tooltip">
+                                <span class="card-verification iconify" data-icon="si:verified-fill"></span>
+                            </div>
+                        </div>
+
+                        <div class="card-tags">
+                            <div class="card-tag">
+                                <div class="card-rating-text">4.8</div>
+                                <div class="card-rating-stars">
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                </div>
+                            </div>
+                            <div class="card-tag">
+                                <span class="iconify card-tag-icon" data-icon="line-md:account"></span>
+                                <div class="card-rating-text">2.4 K</div>
+                            </div>
+                        </div>
+
+                       <div class="card-description">
+    <span class="card-role">Structural Engineer</span><br>
+    ensuring stability using Revit for 3D modeling and analysis.
+</div>
+
+                        <div class="card-button pointer">
+                            <div class="card-button-text pointer">Get In Touch</div>
+                            <div class="card-button-call pointer">
+                                <span class="card-button-call-icon iconify pointer" data-icon="line-md:phone-call-loop"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-fade"></div>
+                </div>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-filter"></div>
+                    <img src="https://i.ibb.co/bjvbhGzc/Gemini-Generated-Image-gwfb1fgwfb1fgwfb.png" alt="bg" class="card-bg">
+
+                    <div class="card-status">
+                        <div class="card-status-dot offline"></div>
+                        <div class="card-status-text">Offline</div>
+                    </div>
+
+                    <div class="card-handle grab">
+                        <div class="card-handle-tip" aria-label="Drag" data-microtip-position="left" role="tooltip">
+                            <span class="iconify handle" data-icon="ic:outline-drag-indicator"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-name-wrap">
+                            <div class="card-name">Irfan Majeed</div>
+                            <div class="card-verfied" aria-label="Verified" data-microtip-position="right" role="tooltip">
+                                <span class="card-verification iconify" data-icon="si:verified-fill"></span>
+                            </div>
+                        </div>
+
+                        <div class="card-tags">
+                            <div class="card-tag">
+                                <div class="card-rating-text">5.0</div>
+                                <div class="card-rating-stars">
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                </div>
+                            </div>
+                            <div class="card-tag">
+                                <span class="iconify card-tag-icon" data-icon="line-md:account"></span>
+                                <div class="card-rating-text">1.7 K</div>
+                            </div>
+                        </div>
+
+                        <div class="card-description">
+    <span class="card-role">3D Visualization</span><br>
+    crafting photorealistic renders and immersive walkthroughs using SketchUp.
+</div>
+
+                        <div class="card-button pointer">
+                            <div class="card-button-text pointer">Get In Touch</div>
+                            <div class="card-button-call pointer">
+                                <span class="card-button-call-icon iconify pointer" data-icon="line-md:phone-call-loop"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-fade"></div>
+                </div>
+            </div>
+            
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-filter"></div>
+                    <img src="https://i.ibb.co/bjvbhGzc/Gemini-Generated-Image-gwfb1fgwfb1fgwfb.png" alt="bg" class="card-bg">
+
+                    <div class="card-status">
+                        <div class="card-status-dot online"></div>
+                        <div class="card-status-text">Online</div>
+                    </div>
+
+                    <div class="card-handle grab">
+                        <div class="card-handle-tip" aria-label="Drag" data-microtip-position="left" role="tooltip">
+                            <span class="iconify handle" data-icon="ic:outline-drag-indicator"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-name-wrap">
+                            <div class="card-name">Aisha Khan</div>
+                            <div class="card-verfied" aria-label="Verified" data-microtip-position="right" role="tooltip">
+                                <span class="card-verification iconify" data-icon="si:verified-fill"></span>
+                            </div>
+                        </div>
+
+                        <div class="card-tags">
+                            <div class="card-tag">
+                                <div class="card-rating-text">4.7</div>
+                                <div class="card-rating-stars">
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled"></span>
+                                    <span class="iconify card-rating-star" data-icon="line-md:star-filled-half"></span>
+                                </div>
+                            </div>
+                            <div class="card-tag">
+                                <span class="iconify card-tag-icon" data-icon="line-md:account"></span>
+                                <div class="card-rating-text">2.9 K</div>
+                            </div>
+                        </div>
+
+                        <div class="card-description">
+    <span class="card-role">Interior Designer</span><br>
+    blending aesthetics with functionality to create modern, ergonomic living spaces.
+</div>
+
+                        <div class="card-button pointer">
+                            <div class="card-button-text pointer">Get In Touch</div>
+                            <div class="card-button-call pointer">
+                                <span class="card-button-call-icon iconify pointer" data-icon="line-md:phone-call-loop"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-fade"></div>
+                </div>
+            </div>
+        </section>
+    </div> <script type="module">
+        // --- 📦 Imports ---
+        import { animate, hover, press } from "https://esm.sh/motion";
+        import { Howl } from "https://esm.sh/howler";
+        import { Sortable, Plugins } from "https://esm.sh/@shopify/draggable";
+
+        // --- 📱 Touch Support ---
+        const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+        // --- 🔊 Audio Helper ---
+        let playAudio = true,
+            ended = true,
+            currentSound;
+
+        // ▶️ Play audio file with optional volume/speed
+        const play = async (file, volume = 0.5, speed = 1) => {
+            const context = new (AudioContext || webkitAudioContext)();
+            await context.resume().catch(() => {});
+            if (context.state === "suspended") return false;
+
+            currentSound?.stop(); // stop any current sound
+            ended = false;
+
+            currentSound = new Howl({
+                src: [file],
+                autoplay: playAudio,
+                volume,
+                rate: speed,
+                onend: () => {
+                    ended = true;
+                    currentSound = null;
+                }
+            });
+
+            return true;
+        };
+
+        // --- 🧱 DOM Elements ---
+        const cards = document.querySelector(".cards");
+
+        // --- 🧲 Sortable Cards Init ---
+        const sortable = new Sortable(cards, {
+            draggable: ".card-wrap",
+            handle: isTouchDevice ? null : ".card-handle",
+            plugins: [Plugins.SortAnimation]
+        });
+
+        // ❌ Cancel mirror on drag end + animate disappearance
+        sortable.on("mirror:destroy", (e) => {
+            e.cancel();
+            const r = e.source.getBoundingClientRect();
+            animate(
+                e.mirror,
+                {
+                    x: r.left,
+                    y: r.top,
+                    filter: "blur(2rem)",
+                    opacity: 0,
+                    scale: 0.5
+                },
+                {
+                    x: { duration: 0.3 },
+                    y: { duration: 0.3 },
+                    filter: { duration: 0.5 },
+                    opacity: { duration: 0.5 },
+                    scale: { duration: 0.5 },
+                    onComplete: () => e.mirror.remove()
+                }
+            );
+        });
+
+        // 🟡 Play drag start sound
+        sortable.on("sortable:start", () => {
+            play("https://cdn.freesound.org/previews/582/582898_5965684-lq.mp3");
+            document.body.classList.add("grabbing");
+        });
+
+        // 🟢 Play drop sound and animate dropped card
+        sortable.on("sortable:stop", (e) => {
+            document.body.classList.remove("grabbing");
+            play("https://cdn.freesound.org/previews/370/370962_5450487-lq.mp3");
+
+            requestAnimationFrame(() => {
+                animate(
+                    e.data.newContainer.children[e.data.newIndex],
+                    { scale: [1.1, 1] },
+                    { type: "spring", stiffness: 200, damping: 10 }
+                );
+            });
+        });
+
+        // --- ✨ Animate Each Card ---
+        [...cards.children].forEach((card, i) => {
+            const bg = card.querySelector(".card-bg");
+            const fade = card.querySelector(".card-fade");
+            const button = card.querySelector(".card-button");
+            const cardUI = card.querySelector(".card");
+            const handle = card.querySelector(".card-handle");
+            const name = card.querySelector(".card-name");
+            const description = card.querySelector(".card-description");
+
+            // 🖱️ Hover on card - fade + button color
+            hover(card, () => {
+                animate(fade, { opacity: 1 });
+                animate(button, { background: "#FF004D" });
+                return () => {
+                    animate(fade, { opacity: 0.75 });
+                    animate(button, { background: "rgba(255, 255, 255, 0.2)" });
+                };
+            });
+
+            // 🎬 Card Fade-in Animation
+            animate(
+                cardUI,
+                {
+                    opacity: [0, 1],
+                    filter: ["blur(1rem)", "blur(0)"]
+                },
+                {
+                    duration: 0.8,
+                    delay: i / 4
+                }
+            );
+
+            // 📝 Animate text entries
+            animate(name, { y: [20, 0], opacity: [0, 1] }, { delay: i / 4 + 0.3 });
+            animate(
+                description,
+                { y: [20, 0], opacity: [0, 0.4] },
+                { delay: i / 4 + 0.5 }
+            );
+
+            // 🌌 Background Pulse
+            animate(
+                bg,
+                {
+                    scale: [1, 1.2]
+                },
+                {
+                    duration: 15,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "linear"
+                }
+            );
+
+            // 👉 Button Press Feedback
+            press(button, () => {
+                animate(button, { scale: 1.1 });
+                return () => animate(button, { scale: 1 });
+            });
+
+            // 🎯 Handle Hover - zoom in effect
+            hover(handle, () => {
+                animate(handle, { scale: 0.95 });
+                animate(bg, { scale: 1.1 }, { type: "spring", stiffness: 50, damping: 10 });
+                animate(
+                    card,
+                    { scale: 1.025 },
+                    { type: "spring", stiffness: 100, damping: 10 }
+                );
+
+                // 🔁 Reset scale + resume bg animation
+                return () => {
+                    animate(
+                        card,
+                        { scale: 1 },
+                        { type: "spring", stiffness: 100, damping: 10 }
+                    );
+                    animate(handle, { scale: 1 });
+                    animate(
+                        bg,
+                        { scale: 1 },
+                        { type: "spring", stiffness: 50, damping: 10 }
+                    ).then(() => {
+                        animate(
+                            bg,
+                            {
+                                scale: [1, 1.2]
+                            },
+                            {
+                                duration: 15,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                                ease: "linear"
+                            }
+                        );
+                    });
+                };
+            });
+        });
+    </script>
+
+
+
 
 
 
@@ -1325,7 +2478,7 @@ hamburger.addEventListener('click', () => {
 
     .mb-4.text-center {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.5rem !important;
   font-weight: 700;
 }
 
@@ -1431,6 +2584,15 @@ hamburger.addEventListener('click', () => {
 <!-- =========================
         FOOTER section
    ========================= -->
+
+
+<!-- =--------------------- -->
+<!-- =--------------------- -->
+<!-- Footer section -->
+ <!-- =--------------------- -->
+   <!-- =--------------------- --> 
+  
+   
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-left">
@@ -1484,6 +2646,160 @@ hamburger.addEventListener('click', () => {
   </div>
 </footer> 
 
+<style>
+    .footer {
+  background: #1d1d1d;
+  color: #fff;
+  padding: 60px 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  max-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff9900;
+}
+
+.footer-newsletter {
+  flex: 1 1 250px;
+}
+
+.footer-newsletter h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.newsletter-box {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 100%; /* <-- Prevents overflow */
+  flex-wrap: wrap;  /* <-- Allows wrapping on smaller screens */
+}
+
+
+@media (max-width: 576px) {
+  .newsletter-box input {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-box button {
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+
+.newsletter-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+.newsletter-box button {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  font-weight: bold;
+}
+
+.newsletter-box button:hover {
+  background: #e58000;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff9900;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 13px;
+  color: #ffffff;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  
+}
+
+
+
+.footer-bottom, .footer-bottom p {
+  color: #ffffff !important;
+}
+
+</style>
+
+
+
+
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1533,4 +2849,5 @@ hamburger.addEventListener('click', () => {
   document.querySelectorAll('.stagger-fade').forEach(el=>observer.observe(el));
 </script>
 </body>
-</html>>
+</html>
+
