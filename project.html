@@ -331,418 +331,10 @@ hamburger.addEventListener('click', () => {
 
 </head>
 <body>
+<div style="height:5vh;"></div>
 
  
 
-
-
- <!-- project section -->
-<section class="project-section" id="projects">
-  <h1 class="project-title-center">Our Projects</h1>
-  <div class="project-container">
-    <div class="project-item" style="--order: 1">
-      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
-        <div class="project-overlay"></div>
-        <div class="project-text-box">
-          <h3 class="project-title">Modern Residential Haven</h3>
-          <p class="project-description">A minimalist home with sleek glass and concrete design.</p>
-          <a href="#" class="read-more" aria-label="Read more about Modern Residential Haven">Read More</a>
-        </div>
-        <div class="project-extra-text">
-          <p>Built in 2020, this modern residence uses floor-to-ceiling glass windows and polished concrete for an open, airy aesthetic.</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-item" style="--order: 2">
-      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1483653364400-eedcfb9f1f88?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
-        <div class="project-overlay"></div>
-        <div class="project-text-box">
-          <h3 class="project-title">Urban Commercial Hub</h3>
-          <p class="project-description">A vibrant office space with steel and wood accents.</p>
-          <a href="#" class="read-more" aria-label="Read more about Urban Commercial Hub">Read More</a>
-        </div>
-        <div class="project-extra-text">
-          <p>Completed in 2021, this commercial building features exposed steel beams and sustainable timber, blending urban and natural elements.</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-item" style="--order: 3">
-      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
-        <div class="project-overlay"></div>
-        <div class="project-text-box">
-          <h3 class="project-title">Eco-Friendly Community Center</h3>
-          <p class="project-description">A sustainable design with green roofs and solar panels.</p>
-          <a href="#" class="read-more" aria-label="Read more about Eco-Friendly Community Center">Read More</a>
-        </div>
-        <div class="project-extra-text">
-          <p>This 2022 project incorporates green roofs and solar panels, achieving LEED certification for its eco-conscious materials and design.</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-item" style="--order: 4">
-      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&w=1200&q=80');">
-        <div class="project-overlay"></div>
-        <div class="project-text-box">
-          <h3 class="project-title">Historic Restoration Project</h3>
-          <p class="project-description">Restored 19th-century facade with modern interiors.</p>
-          <a href="#" class="read-more" aria-label="Read more about Historic Restoration Project">Read More</a>
-        </div>
-        <div class="project-extra-text">
-          <p>This 2023 restoration preserves the original brick facade while integrating modern interiors with energy-efficient systems.</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-item extra-project d-none" style="--order: 5">
-      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&w=1200&q=80');">
-        <div class="project-overlay"></div>
-        <div class="project-text-box">
-          <h3 class="project-title">Futuristic Urban Tower</h3>
-          <p class="project-description">A high-rise with curved glass and smart technology.</p>
-          <a href="#" class="read-more" aria-label="Read more about Futuristic Urban Tower">Read More</a>
-        </div>
-        <div class="project-extra-text">
-          <p>Constructed in 2024, this 30-story tower features curved glass panels and integrated smart systems for energy efficiency.</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-item extra-project d-none" style="--order: 6">
-      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&w=1200&q=80');">
-        <div class="project-overlay"></div>
-        <div class="project-text-box">
-          <h3 class="project-title">Cultural Heritage Museum</h3>
-          <p class="project-description">A museum blending traditional and modern elements.</p>
-          <a href="#" class="read-more" aria-label="Read more about Cultural Heritage Museum">Read More</a>
-        </div>
-        <div class="project-extra-text">
-          <p>Opened in 2025, this museum combines traditional stonework with modern steel frameworks to celebrate cultural heritage.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="project-button-container">
-    <button id="showMoreProjects" class="read-more-button" aria-label="Show more projects">
-      Show More <span class="project-count">+2</span>
-    </button>
-  </div>
-</section>
-
-<style>
-
-
-/* Project section */
-.project-section {
-  padding: 80px 15px;
-  background: linear-gradient(135deg, #fafafa, #e6e6e6);
-  color: #1a2a44;
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  margin: 0;
-}
-.project-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-  z-index: -1;
-  animation: pulse 15s infinite alternate; /* Slower for elegance */
-}
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.2; }
-  100% { transform: scale(1.1); opacity: 0.05; }
-}
-.project-title-center {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #1a2a44;
-  margin-bottom: 50px;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-  opacity: 0;
-  animation: fadeInTitle 1s ease-in-out forwards;
-}
-@keyframes fadeInTitle {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.project-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 40px;
-  column-gap: 40px;
-}
-.project-item {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  padding: 10px;
-  position: relative;
-  border: 1px solid transparent;
-  transition: border 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: calc(var(--order) * 0.2s);
-}
-.project-item:hover {
-  border-image: linear-gradient(to right, #ffd700, #1abc9c) 1;
-}
-.project-item.hidden,
-.d-none {
-  display: none !important;
-}
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.project-image {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4/3;
-  max-height: 300px;
-  background: no-repeat center center;
-  background-size: cover;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.project-item:hover .project-image {
-  transform: scale(1.1);
-  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
-}
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(44, 62, 80, 0.7), transparent);
-  opacity: 0;
-  transition: opacity 0.4s ease, filter 0.4s ease;
-}
-.project-item:hover .project-overlay {
-  opacity: 1;
-  filter: blur(2px);
-}
-.project-text-box {
-  position: absolute;
-  top: 0; /* Moved to top-right */
-  right: 0;
-  width: 50%;
-  height: 30%;
-  background: linear-gradient(to bottom, rgba(26, 42, 68, 0.95), rgba(26, 188, 156, 0.7));
-  color: #ffffff;
-  padding: 15px;
-  border-radius: 0 8px 0 8px;
-  opacity: 0;
-  transform: translateY(-100%); /* Slide down on hover */
-  transition: opacity 0.4s ease, transform 0.4s ease 0.1s;
-  z-index: 2;
-}
-.project-item:hover .project-text-box {
-  opacity: 1;
-  transform: translateY(0);
-}
-.project-extra-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 30%;
-  background: rgba(255, 215, 0, 0.2);
-  border-left: 4px solid #ffd700;
-  color: #1a2a44;
-  padding: 15px;
-  border-radius: 0 0 8px 0;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.4s ease, transform 0.4s ease 0.2s;
-  z-index: 2;
-}
-.project-item:hover .project-extra-text {
-  opacity: 1;
-  transform: translateX(0);
-}
-.project-extra-text p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.85rem;
-  color: #1a2a44;
-  margin: 0;
-}
-.project-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-.project-item:hover .project-title {
-  color: #ffd700;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
-}
-.project-description {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
-  color: #d0d0d0;
-  margin-bottom: 8px;
-}
-.project-item:hover .project-description {
-  color: #ffffff;
-}
-.read-more {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.8rem;
-  color: #1abc9c;
-  text-decoration: underline;
-  transition: color 0.4s ease, transform 0.4s ease;
-}
-.read-more:focus {
-  outline: 2px solid #ffd700;
-  outline-offset: 2px;
-}
-.project-item:hover .read-more {
-  color: #16a085;
-  transform: scale(1.1);
-}
-.project-button-container {
-  text-align: center;
-  margin-top: 40px;
-  position: relative;
-}
-.read-more-button, #showMoreProjects {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  padding: 12px 32px;
-  font-size: 1rem;
-  border-radius: 30px;
-  background: linear-gradient(to right, #e74c3c, #c0392b);
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, filter 0.3s ease;
-  opacity: 0;
-  animation: fadeInButton 1s ease-in-out 0.5s forwards;
-}
-.read-more-button:hover, #showMoreProjects:hover {
-  background: linear-gradient(to right, #c0392b, #a32b1e);
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
-  filter: brightness(1.2);
-}
-.read-more-button:focus, #showMoreProjects:focus {
-  outline: 2px solid #ffd700;
-  outline-offset: 2px;
-}
-.project-count {
-  display: inline-block;
-  background: #ffd700;
-  color: #1a2a44;
-  font-size: 0.8rem;
-  padding: 2px 8px;
-  border-radius: 12px;
-  margin-left: 8px;
-  animation: fadeInBadge 1s ease-in-out 0.7s forwards;
-  opacity: 0;
-}
-@keyframes fadeInButton {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInBadge {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
-@media (max-width: 768px) {
-  .project-section {
-    padding: 40px 15px;
-  }
-  .project-container {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-    column-gap: 0;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .project-item {
-    margin: 0 !important;
-    padding: 8px;
-    border: none; /* Remove gradient border on mobile for simplicity */
-  }
-  .project-image {
-    max-height: 250px;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .project-text-box, .project-extra-text {
-    width: 60%;
-    height: 35%;
-    padding: 10px;
-    transform: scale(0.95); /* Simplified animation for mobile */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  .project-item:hover .project-text-box,
-  .project-item:hover .project-extra-text {
-    transform: scale(1);
-  }
-  .project-text-box {
-    transform: translateY(-100%); /* Maintain slide-down for mobile */
-  }
-  .project-item:hover .project-text-box {
-    transform: translateY(0);
-  }
-  .project-extra-text {
-    transform: translateX(-100%);
-  }
-  .project-item:hover .project-extra-text {
-    transform: translateX(0);
-  }
-  .project-title {
-    font-size: 1rem;
-  }
-  .project-description {
-    font-size: 0.8rem;
-  }
-  .project-extra-text p {
-    font-size: 0.75rem;
-  }
-  .read-more {
-    font-size: 0.75rem;
-  }
-  .read-more-button, #showMoreProjects {
-    padding: 10px 24px;
-    font-size: 0.9rem;
-  }
-  .project-count {
-    font-size: 0.7rem;
-    padding: 2px 6px;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  function showMoreProjects() {
-    const hiddenProjects = document.querySelectorAll('.project-item.extra-project.d-none');
-    hiddenProjects.forEach(project => {
-      project.classList.remove('d-none');
-    });
-    document.querySelector('.project-button-container').style.display = 'none';
-  }
-
-  const showMoreButton = document.querySelector('#showMoreProjects');
-  if (showMoreButton) {
-    showMoreButton.addEventListener('click', showMoreProjects);
-  }
-});
-</script>
 
 
 
@@ -751,187 +343,777 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <!-- =========================
-     PHOTO SHOWCASE (Pexels)
-     - 4 cols desktop, 3 cols lg, 2 cols md, 2 cols mobile
-     - Hover zoom + overlay + subtle tilt
-     - Lazy-loaded, with Unsplash fallback if any image fails
+    Project section Title
    ========================= -->
-<div class="row my-5">
-  <div class="col-12">
-    <h3 class="mb-4 text-center">Our Journey in Frames</h3>
 
-    <div class="lu-image-grid">
-      <!-- Card 1 -->
-      <figure class="lu-image-card" aria-label="Collaborative strategy session">
-        <img
-          loading="lazy"
-          src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-          alt="Team collaborating around a laptop"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80';"
-        />
-        <figcaption class="lu-overlay"><span>Collaborative Strategy</span></figcaption>
-      </figure>
 
-      <!-- Card 2 -->
-      <figure class="lu-image-card" aria-label="Planning and documentation">
-        <img
-          loading="lazy"
-          src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-          alt="Consultant writing plans"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80';"
-        />
-        <figcaption class="lu-overlay"><span>Planning in Motion</span></figcaption>
-      </figure>
+  
 
-      <!-- Card 3 -->
-      <figure class="lu-image-card" aria-label="Analytics and insights">
-        <img
-          loading="lazy"
-          src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-          alt="Charts and analytics on a laptop"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80';"
-        />
-        <figcaption class="lu-overlay"><span>Data-Driven Insights</span></figcaption>
-      </figure>
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-      <!-- Card 4 -->
-      <figure class="lu-image-card" aria-label="Performance metrics review">
-        <img
-          loading="lazy"
-          src="https://images.pexels.com/photos/3184636/pexels-photo-3184636.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-          alt="People reviewing performance metrics"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80';"
-        />
-        <figcaption class="lu-overlay"><span>Performance Reviews</span></figcaption>
-      </figure>
-
-      <!-- Card 5 -->
-      <figure class="lu-image-card" aria-label="Workshop and coaching">
-        <img
-          loading="lazy"
-          src="https://images.pexels.com/photos/3730765/pexels-photo-3730765.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-          alt="Workshop session with laptops"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80';"
-        />
-        <figcaption class="lu-overlay"><span>Workshops & Coaching</span></figcaption>
-      </figure>
-
-      <!-- Card 6 -->
-      <figure class="lu-image-card" aria-label="Presentation and strategy board">
-        <img
-          loading="lazy"
-          src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-          alt="Presentation in meeting room"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=800&q=80';"
-        />
-        <figcaption class="lu-overlay"><span>Present • Align • Act</span></figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
+ <section class="project-title-section">
+  <h1 class="project-title">Our Projects</h1>
+</section>
 
 <style>
-
-    .mb-4.text-center {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 700;
+.project-title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20vh; /* Adjust vertical spacing as needed */
 }
 
-@media (max-width: 992px) {
-  .mb-4.text-center {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem; /* smaller on tablets/mobiles */
-    font-weight: 700;
-  }
+.project-title {
+  font-weight: 300;
+  font-size: clamp(3rem, 10vw, 6rem);
+  letter-spacing: 4px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  position: relative;
 }
-  /* Grid: 4 cols desktop, 3 lg, 2 md, 2 mobile (space-saving) */
-  .lu-image-grid{
-         
-    display:grid;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:16px;
-  }
-  @media (max-width: 1200px){ .lu-image-grid{ grid-template-columns:repeat(3,1fr);} }
-  @media (max-width: 992px){  .lu-image-grid{ grid-template-columns:repeat(2,1fr);} }
-  @media (max-width: 576px){  .lu-image-grid{ grid-template-columns:repeat(2,1fr);} } /* 2 cols on mobile */
 
-  .lu-image-card{
-    position:relative;
-    border-radius:14px;
-    overflow:hidden;
-    cursor:pointer;
-    background:#eee;
-    /* consistent shape */
-    aspect-ratio: 4 / 3;
-    transform: perspective(700px) rotateX(0) rotateY(0) translateZ(0);
-    transition: transform .35s ease, box-shadow .35s ease;
-    will-change: transform;
-  }
-  .lu-image-card img{
-    width:100%; height:100%; object-fit:cover; display:block;
-    transition: transform .6s ease, filter .6s ease;
-    filter: saturate(0.95) contrast(1.02);
-  }
-  .lu-image-card:hover img{ transform: scale(1.06); filter: saturate(1.05) contrast(1.05); }
-  .lu-image-card:hover{ box-shadow:0 16px 40px rgba(0,0,0,.16); }
+/* Decorative lines */
+.project-title::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #4b5563, #9ca3af);
+  border-radius: 2px;
+}
 
-  .lu-overlay{
-    position:absolute; inset:0;
-    display:flex; align-items:center; justify-content:center;
-    background:linear-gradient(180deg, rgba(10,37,64,.08) 0%, rgba(10,37,64,.55) 100%);
-    color:#fff; opacity:0; transition: opacity .35s ease;
-    padding:10px; text-align:center;
-  }
-  .lu-overlay span{
-    font-weight:600; letter-spacing:.3px; line-height:1.2;
-    text-shadow:0 2px 8px rgba(0,0,0,.35);
-  }
-  .lu-image-card:hover .lu-overlay{ opacity:1; }
+.project-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: #d1d5db;
+  border-radius: 1px;
+}
 
-  /* Reveal on scroll */
-  .lu-image-card{ opacity:0; transform: translateY(16px) perspective(700px) rotateX(0) rotateY(0); }
-  .lu-image-card.lu-visible{ opacity:1; transform: translateY(0) perspective(700px) rotateX(0) rotateY(0); transition: opacity .6s ease, transform .6s ease; }
+/* Responsive */
+@media (max-width: 768px) {
+  .project-title { font-size: clamp(2rem, 12vw, 4rem); letter-spacing: 2px; }
+  .project-title::before { width: 60px; height: 3px; bottom: -8px; }
+  .project-title::after { width: 40px; height: 2px; top: -8px; }
+}
 </style>
 
-<script>
-  // Subtle tilt on hover (desktop only)
-  (function(){
-    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    if(isTouch) return; // skip on touch devices
 
-    document.querySelectorAll('.lu-image-card').forEach(card=>{
-      const damp = 12; // lower = stronger tilt
-      card.addEventListener('mousemove', (e)=>{
-        const b = card.getBoundingClientRect();
-        const x = e.clientX - b.left, y = e.clientY - b.top;
-        const rx = ((y / b.height) - 0.5) * -damp;
-        const ry = ((x / b.width) - 0.5) * damp;
-        card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-      });
-      card.addEventListener('mouseleave', ()=>{
-        card.style.transform = 'perspective(700px) rotateX(0) rotateY(0)';
-      });
-    });
-  })();
 
-  // Intersection observer: reveal & gentle stagger
-  (function(){
-    const cards = document.querySelectorAll('.lu-image-card');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('lu-visible');
-          io.unobserve(entry.target);
+
+
+
+
+
+
+
+
+<!-- =========================
+    Project section
+   ========================= -->
+  
+    <style>
+        /* --- CSS VARIABLES FOR FIXED COLUMN LAYOUT --- */
+        :root {
+            /* Variables for the smaller thumbnail items */
+            --thumb-width: 150px;
+            --thumb-height: 180px;
+            /* Variable for the main, large item */
+            --main-slide-width: 580px; 
+            --gap-width: 20px;
         }
-      });
-    }, { threshold: 0.2 });
-    cards.forEach((c,i)=>{
-      c.style.transitionDelay = (i * 70) + 'ms';
-      io.observe(c);
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #b9bbb9;
+            font-family: 'Inter', sans-serif;
+           
+        }
+        
+        /* ----------------------------------------------------------------- */
+        /* --- NEW: Main Wrapper for Multi-Column Desktop Layout (CSS Grid) --- */
+        /* ----------------------------------------------------------------- */
+        .main-gallery-wrapper {
+            display: grid;
+            /* Two columns on desktop: one for each gallery */
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; /* Space between the two galleries */
+            max-width: 1700px; /* Adjust as needed for wide screens */
+            margin: 0 auto;
+            padding: 0 40px; /* Padding for the wrapper */
+        }
+        
+        /* Container Styling (Applied to each independent gallery) */
+        .gallery-container {
+            position: relative; 
+            margin: 30px auto; /* Reduced margin to fit into the grid item */
+            width: 100%; /* Will take 100% of its grid cell */
+            max-width: 800px; /* Maximum size for the inner container */
+            height: 400px;
+            background: #f5f5f5;
+            box-shadow: 0 30px 50px #dbdbdb;
+            border-radius: 20px;
+            overflow: hidden;
+            align-self: start; /* Align to the start of the grid cell */
+        }
+
+        /* Slide Area */
+        .gallery-container .gallery-slide {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%; 
+            position: relative; 
+        }
+
+        /* Individual Gallery Item (Thumbnail Style) */
+        .gallery-item {
+            background-image: var(--bg-url); 
+            width: var(--thumb-width);
+            height: var(--thumb-height);
+            position: absolute;
+            top: 0; 
+            transform: none; 
+            border-radius: 20px;
+            box-shadow: 0 10px 30px #505050;
+            background-position: 50% 50%;
+            background-size: cover;
+            display: inline-block;
+            transition: all 0.5s;
+        }
+
+        /* Positioning for the main visible items (Large on the left) */
+        .gallery-slide .gallery-item:nth-child(1),
+        .gallery-slide .gallery-item:nth-child(2) {
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            border-radius: 20px;
+            width: var(--main-slide-width);
+            height: 100%;
+            transition: all .5s;
+        }
+
+        /* Positioning for the vertical thumbnail column on the right (Item 3) */
+        .gallery-slide .gallery-item:nth-child(3) {
+            /* Note: The calc values will be relative to the dynamic gallery-container width */
+            left: calc(100% - var(--thumb-width) - var(--gap-width)); 
+            top: var(--gap-width);
+            width: var(--thumb-width);
+            height: var(--thumb-height);
+            opacity: 1;
+        }
+        
+        /* Positioning for the vertical thumbnail column on the right (Item 4) */
+        .gallery-slide .gallery-item:nth-child(4) {
+            /* Note: The calc values will be relative to the dynamic gallery-container width */
+            left: calc(100% - var(--thumb-width) - var(--gap-width));
+            top: calc(2 * var(--gap-width) + var(--thumb-height)); 
+            width: var(--thumb-width);
+            height: var(--thumb-height);
+            opacity: 1;
+        }
+
+        /* Hide items beyond the fourth */
+        .gallery-slide .gallery-item:nth-child(n + 5) {
+            left: calc(100% + 50px); /* Move completely off screen to the right */
+            top: 0; 
+            opacity: 0;
+        }
+
+        /* Content inside the item */
+        .gallery-content {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 300px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0, -50%);
+            font-family: system-ui;
+            display: none;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
+        }
+
+        /* Show content only for the second item (the main visible one) */
+        .gallery-slide .gallery-item:nth-child(2) .gallery-content {
+            display: block;
+        }
+
+        /* Content components (omitted for brevity, assume they are the same) */
+        .gallery-content .gallery-name {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: 0;
+            animation: animate 1s ease-in-out 1 forwards;
+        }
+
+        .gallery-content .gallery-des {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.3s 1 forwards;
+        }
+
+        .gallery-content button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.673);
+            transition: all 0.5s;
+            animation: animate 1s ease-in-out 0.6s 1 forwards;
+            color: #000;
+        }
+
+        .gallery-content button:hover {
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* Keyframe animation syntax */
+        @keyframes animate {
+            from { opacity: 0; transform: translate(0, 100px); filter: blur(33px); }
+            to { opacity: 1; transform: translate(0); filter: blur(0); }
+        }
+
+        /* Navigation Buttons Container */
+        .gallery-button-group {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            left: calc(var(--main-slide-width) / 2);
+            transform: translateX(-50%);
+            width: fit-content;
+            align-items: center;
+            position: absolute;
+            bottom: 20px;
+            z-index: 100;
+        }
+
+        .gallery-button-group button {
+            width: 40px;
+            height: 35px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            border: 2px solid #000000bd;
+            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.578);
+        }
+
+        .gallery-button-group button:hover,
+        .gallery-button-group button:focus {
+            color: #000000;
+            border: 2px solid #ffffffbd;
+            transform: scale(1.1);
+        }
+        .gallery-button-group button:active {
+            transform: scale(1.02);
+        }
+
+        /* Specific button padding */
+        .next { padding: 0 0 0 3px; }
+        .prev { padding: 0 3px 0 0; }
+
+        
+        /* --- Media Query for Mobile and Small Screens --- */
+        @media screen and (max-width: 1650px) {
+            /* Adjust content for slightly smaller desktops/large tablets */
+            :root {
+                --main-slide-width: 65%; /* Make the main slide proportional */
+            }
+
+            .gallery-slide .gallery-item:nth-child(3) {
+                left: calc(var(--main-slide-width) + var(--gap-width)); 
+                top: var(--gap-width);
+            }
+            
+            .gallery-slide .gallery-item:nth-child(4) {
+                left: calc(var(--main-slide-width) + var(--gap-width));
+                top: calc(2 * var(--gap-width) + var(--thumb-height)); 
+            }
+            .gallery-slide .gallery-item:nth-child(n + 5) {
+                 left: calc(var(--main-slide-width) + var(--gap-width)); 
+                 top: calc(100% + 50px);
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+            /* Reduce the overall width of the wrapper on smaller screens */
+            .main-gallery-wrapper {
+                max-width: 1200px;
+                gap: 20px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            /* ----------------------------------------------------------------- */
+            /* --- NEW: Revert to single column for Mobile --- */
+            /* ----------------------------------------------------------------- */
+            .main-gallery-wrapper {
+                /* Set back to a single column for vertical stacking */
+                grid-template-columns: 1fr; 
+                padding: 0 10px; /* Adjust padding for mobile */
+                gap: 0; /* Remove gap between galleries on mobile */
+            }
+
+            /* 1. Adjust the Main Container and Variables */
+            .gallery-container {
+                width: 95vw;
+                height: 60vh;
+                min-height: 400px;
+                margin: 50px auto; 
+                box-shadow: 0 10px 20px #dbdbdb;
+            }
+
+            :root {
+                --thumb-width: 90px;
+                --thumb-height: 110px;
+                --gap-width: 5px;
+                --main-slide-width: 100%; 
+            }
+            
+            /* Ensure the main item fills the container */
+            .gallery-slide .gallery-item:nth-child(1),
+            .gallery-slide .gallery-item:nth-child(2) {
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* 2. Adjust Positioning of Secondary Items (Mobile Horizontal Thumbnail Stack) */
+            .gallery-item {
+                width: var(--thumb-width);
+                height: var(--thumb-height);
+                border-radius: 15px;
+                box-shadow: 0 5px 15px #505050;
+            }
+
+            .gallery-slide .gallery-item:nth-child(3) {
+                /* Position 3rd item near the right edge */
+                left: calc(100% - 2 * var(--thumb-width) - var(--gap-width) - 5px); 
+                top: 20%; 
+                transform: none;
+            }
+            
+            .gallery-slide .gallery-item:nth-child(4) {
+                /* Position 4th item on the far right edge */
+                left: calc(100% - var(--thumb-width) - 5px);
+                top: 20%; 
+                transform: none;
+            }
+            
+            .gallery-slide .gallery-item:nth-child(n + 5) {
+                left: 100%;
+                opacity: 0;
+                transform: none;
+            }
+
+            /* 3. Corrected Content Visibility Logic (omitted for brevity, assume they are the same) */
+            .gallery-content {
+                display: none; 
+                left: 0;
+                bottom: 0;
+                top: unset;
+                transform: none;
+                width: 100%;
+                text-align: left;
+                padding: 15px 20px;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+                box-sizing: border-box;
+            }
+
+            .gallery-slide .gallery-item:nth-child(2) .gallery-content {
+                display: block;
+            }
+
+            .gallery-content .gallery-name { font-size: 24px; margin-top: 0; }
+            .gallery-content .gallery-des { font-size: 14px; margin-top: 5px; margin-bottom: 15px; }
+
+            .gallery-content button {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
+            /* 4. Adjust Navigation Buttons and Footer (omitted for brevity, assume they are the same) */
+            .gallery-button-group {
+                bottom: 15px; 
+                gap: 10px; 
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .gallery-button-group button {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main-gallery-wrapper">
+        
+        <div class="gallery-container" id="slider-fixed-1">
+            <div class="gallery-slide">
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/Jjh0qTFd/1.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">3F HOUSE</div>
+                        <div class="gallery-des">
+                            Experience the mystical Highlands under twilight skies and misty lochs.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/LdW6d9qR/2.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">3F HOUSE</div>
+                        <div class="gallery-des">
+                            Roof terrace for recreation or outdoor gatherings.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/8LCMPKqv/3.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">3F HOUSE</div>
+                        <div class="gallery-des">
+                            Energy-efficient windows and ventilation for sustainable living.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/YF1Gy9Q3/4.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">3F HOUSE</div>
+                        <div class="gallery-des">
+                            Designed for comfortable family living across three floors.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-button-group">
+                <button class="prev">◁</button>
+                <button class="next">▷</button>
+            </div>
+        </div>
+        
+        <div class="gallery-container" id="slider-fixed-2">
+            <div class="gallery-slide">
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/n8RVHM4x/5.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Residential Project</div>
+                        <div class="gallery-des">
+                            Built with durable construction materials for long-lasting strength.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/JjkQZ4cG/6.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Residential Project</div>
+                        <div class="gallery-des">
+                            Elegant exterior façade with modern architectural design.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/LhtNwtLP/7.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Residential Project</div>
+                        <div class="gallery-des">
+                            Efficient layout maximizing usable space on each floor.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/2YjYT2nh/8.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Residential Project</div>
+                        <div class="gallery-des">
+                            A stunning urban skyline view, showcasing modern architecture at dusk.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-button-group">
+                <button class="prev">◁</button>
+                <button class="next">▷</button>
+            </div>
+        </div>
+        
+    </div> 
+    
+
+        <div class="main-gallery-wrapper">
+        
+        <div class="gallery-container" id="slider-fixed-3">
+            <div class="gallery-slide">
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/VW94TDjP/9.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Housing Project</div>
+                        <div class="gallery-des">
+                            Natural lighting incorporated throughout the building.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/C3ZRCqtX/10.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Housing Project</div>
+                        <div class="gallery-des">
+                            Flexible interior spaces adaptable to different needs.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/0jnnyDsp/11.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Housing Project</div>
+                        <div class="gallery-des">
+                            Safe and secure structure with attention to safety standards.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('https://i.ibb.co/QvfXDcWg/12.jpg');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Housing Project</div>
+                        <div class="gallery-des">
+                           Incorporates energy efficiency and ventilation considerations.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-button-group">
+                <button class="prev">◁</button>
+                <button class="next">▷</button>
+            </div>
+        </div>
+        
+        <div class="gallery-container" id="slider-fixed-4">
+            <div class="gallery-slide">
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Dwelling Project</div>
+                        <div class="gallery-des">
+                           Harmonious integration with surrounding landscape or environment.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Dwelling Project</div>
+                        <div class="gallery-des">
+                            The building is designed with a strong foundation and durable structure.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Dwelling Project</div>
+                        <div class="gallery-des">
+                            Large windows are included to ensure proper natural lighting throughout interiors.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    style="--bg-url: url('');"
+                >
+                    <div class="gallery-content">
+                        <div class="gallery-name">Dwelling Project</div>
+                        <div class="gallery-des">
+                            Modern electrical and plumbing systems are installed for efficient daily usage.
+                        </div>
+                        <a class="gallery-seeMore" target="_blank"><button>Discover</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-button-group">
+                <button class="prev">◁</button>
+                <button class="next">▷</button>
+            </div>
+        </div>
+        
+    </div> 
+   <script>
+    "use strict";
+
+    /**
+     * Initializes an independent gallery slider instance.
+     * @param {string} containerId - The unique ID of the main slider container (e.g., 'slider-fixed-1').
+     */
+    const initGallerySlider = (containerId) => {
+        // Find the main container element by its unique ID
+        const container = document.getElementById(containerId);
+        if (!container) return; // Stop if the container is not found
+
+        // Use querySelector *on the container* to find elements INSIDE it
+        const nextButton = container.querySelector(".next");
+        const prevButton = container.querySelector(".prev");
+        const slideContainer = container.querySelector(".gallery-slide");
+        
+        // Safety check
+        if (!nextButton || !prevButton || !slideContainer) {
+            console.error(`Missing elements for gallery slider: #${containerId}`);
+            return;
+        }
+
+        const handleNext = () => {
+            // Find items *only* within this slider's container
+            const items = slideContainer.querySelectorAll(".gallery-item");
+            if (items.length > 0) {
+                slideContainer.appendChild(items[0]);
+            }
+        };
+
+        const handlePrev = () => {
+            // Find items *only* within this slider's container
+            const items = slideContainer.querySelectorAll(".gallery-item");
+            if (items.length > 0) {
+                slideContainer.prepend(items[items.length - 1]);
+            }
+        };
+
+        // Attach event listeners for manual control
+        nextButton.addEventListener("click", handleNext);
+        prevButton.addEventListener("click", handlePrev);
+
+
+        // --- Auto-Slide Logic (Scoped to this Instance) ---
+        let autoSlideInterval = null;
+        // The mobileMediaQuery variable is no longer used for the auto-slide logic.
+
+        const stopAutoSlide = () => {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = null;
+            }
+        };
+
+        const startAutoSlide = () => {
+            // *** MODIFIED: Auto-slide now starts regardless of screen size ***
+            if (autoSlideInterval === null) {
+                // Start auto-slide for this instance (3000ms = 3 seconds)
+                autoSlideInterval = setInterval(handleNext, 3000); 
+            }
+        };
+        
+        // Initial start on ALL screen sizes
+        startAutoSlide();
+        
+        // Stop auto-slide if the user interacts with this instance's buttons
+        nextButton.addEventListener("click", stopAutoSlide);
+        prevButton.addEventListener("click", stopAutoSlide);
+
+        // *** REMOVED: The media query listener that controlled auto-slide on resize is removed ***
+        // because we want the auto-slide to run constantly.
+    };
+
+    // ---------------------------------------------------------------------
+    // Initialize all sliders on DOMContentLoaded
+    // ---------------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+        // Call the function for each slider instance by its unique ID
+        initGallerySlider('slider-fixed-1');
+        initGallerySlider('slider-fixed-2');
+        initGallerySlider('slider-fixed-3');
+        initGallerySlider('slider-fixed-4'); 
     });
-  })();
+
 </script>
+
+
+
+
+
+
+
 
 
 
@@ -1147,4 +1329,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 </body>
-</html>>
+</html>
